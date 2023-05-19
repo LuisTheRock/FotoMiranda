@@ -1,0 +1,73 @@
+{
+  "routesNavbar1": "Portofólio",
+  "routesNavbar2": "Empresa",
+  "routesNavbar3": "Contactos",
+
+  "principalHeader": "\"Criar memórias inesquecíveis para o vosso dia especial.\"",
+  "principalButton": "Curioso? Vamos explorar",
+  "labelSend": "Enviar",
+  "labelExit": "Sair",
+
+  "aboutCompanyTitle": "Quem somos?",
+  "aboutCompany1p": "Permitam que a vossa história seja contada com simplicidade e emoção, resultando em imagens transparentes e inesquecíveis.",
+  "aboutCompany2p": "A Foto Miranda deseja participar do vosso casamento e eternizar o romantismo presente no ar. Sinónimo de qualidade e perfeição, a empresa dá o seu melhor para que a vossa celebração seja simplesmente memorável.",
+  "aboutCompany3p": "Contudo, fotografamos e filmamos o vosso casamento com técnicas avançadas e equipamentos de última geração.",
+  "aboutCompany4p": "O material será entregue em alta resolução, álbum digital personalizado. A empresa também atende outros eventos sociais, tais como batizados, comunhões, sessões de estúdio de bébes como sessões de grávidas.",
+  "aboutCompany5p": "Se tiver alguma questão, por favor entre em contacto conosco.",
+
+  "portfolioTitle": "Algums momentos",
+  "portfolioSection1": "Amigos",
+  "portfolioSection2": "Amor",
+  "portfolioSection3": "Nascimento",
+  "portfolioSection4": "Casamento",
+
+  "contactUsTitle": "Contacto",
+  "contactUsSubtitle": "Localizada no concelho de Vila Nova de Gaia no distrito do Porto e com fáceis acessos provenientes da autoestrada, aqui encontram-se as nossas informações.",
+  "contactUsFormTitle": "Contacte-nos",
+  "contactUsFormDescription": "Se desejar contactar-nos, por favor preencha o formulário abaixo com a sua informação e o seu pedido",
+  "address": "Morada",
+  "cellphone": "Telemóvel",
+
+  "footer1": " \"A fotografia é a poesia dos olhos, traduzida na essência das emoções.\" - Michelle Ramos",
+  "footer2": "Permita que a sua história seja contada de uma forma verdadeira.",
+
+  "formContactName*": "Nome*",
+  "formContactName": "Nome",
+  "formContactCellphone*": "Telemóvel",
+  "formContactCellphone": "Telemóvel",
+  "formContactMessage*": "Menssagem*",
+  "formContactMessage": "Menssagem",
+  "formImagesLabel": "Imagens:",
+  "necessaryField": "*Campo necessário",
+
+  "loginUser*": "Utilizador*",
+  "loginUser": "Utilizador",
+  "loginPassword*": "Password*",
+  "loginPassword": "Password",
+  "loginButtonLabel": "Iniciar Sessão",
+  "labelLogOut": "Sessão terminada com sucesso",
+
+  "demandCamp": "Campo obrigatório",
+  "max50Characters": "Máximo de 50 caracteres",
+  "invalidEmail": "Email inválido",
+  "invalidCellphone": "Número inválido",
+  "max1000Characters": "Máximo de 1000 caracteres",
+  "min6Characters": "Minimo de 6 caracteres",
+  "passwordNecessary": "Password necessária",
+  "authNecessary": "Saiu da página e perdeu o acesso\nPor favor faça a autenticação novamente",
+
+  "registAlbum": "Registar Album",
+  "labelAlbums": "Albums",
+  "labelSeeAlbum": "Ver Album",
+  "labelRemoveAlbum": "Remover",
+  "tableLabelName": "Nome",
+  "tableLabelFunction": "Função",
+  "tableLabelCreatedAt": "Criado em",
+  "tableLabelActions": "Ações",
+
+  "labelWelcome": "Bem vindo",
+  "labelErrorConnectionServer": "Erro de conexão com o servidor",
+
+  "videosStage": "Em breve teremos novidades",
+  "videosStage1": "Mas não ficamos por aqui, vamos continuar a experiência"
+}

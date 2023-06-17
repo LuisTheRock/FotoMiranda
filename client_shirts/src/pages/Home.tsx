@@ -1,4 +1,3 @@
-import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import { t } from 'i18next';
 
 import { index } from '../assets/home';
@@ -6,25 +5,22 @@ import Carousel from '../components/ui/Carousel';
 
 const Home = () => (
   <section>
-    <div className={`h-screen relative`}>
+    <div className={'h-screen relative'}>
       <Carousel images={index} altName={'fotomiranda home'} />
 
-      <div
+      <article
         className={
-          'flex w-full flex-col items-center justify-center bottom-0 absolute gap-y-2 -h-1/4'
+          'flex w-full items-center bottom-10 justify-center absolute rounded-lg px-2 pt-1'
         }
       >
-        <h1
+        <header
           className={
-            'text-center md:text-5xl text-3xl font-normal text-white font-DancingScript'
+            'text-center lg:text-5xl md:text-4xl text-3xl text-white font-normal font-DancingScript'
           }
         >
           {t('principalHeader')}
-        </h1>
-        <a href={'#about'}>
-          <ChevronDownIcon className={'md:w-16 w-10 stroke-1 stroke-white'} />
-        </a>
-      </div>
+        </header>
+      </article>
     </div>
   </section>
 );

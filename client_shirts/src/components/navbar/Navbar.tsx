@@ -36,7 +36,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`flex h-full w-full justify-between navbar`}>
+    <nav className={`flex h-full w-full justify-between`}>
       {isAuth ? (
         <ul
           className={'list-none sm:flex hidden justify-end items-center flex-1'}
@@ -49,9 +49,7 @@ const Navbar = () => {
       ) : (
         <>
           <ul
-            className={
-              'list-none sm:flex hidden justify-end items-center flex-1'
-            }
+            className={`list-none sm:flex hidden justify-end items-center flex-1`}
           >
             <RoutesNavbar />
           </ul>

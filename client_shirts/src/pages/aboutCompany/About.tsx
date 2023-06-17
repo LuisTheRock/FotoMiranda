@@ -1,6 +1,6 @@
-import ImageUncles from '../../assets/tios.jpg';
-import LogoSVG from '../../assets/Logo_1.png';
 import { useTranslation } from 'react-i18next';
+
+import ImageUncles from '../../assets/tios.jpg';
 
 const About = () => {
   const { t } = useTranslation();
@@ -16,44 +16,42 @@ const About = () => {
     <section id={'about'} className={'h-screen relative'}>
       <div
         className={
-          'bg-port2 md:top-[15%] left-0 md:bottom-[15%] md:left-[45%] absolute'
+          'md:bg-port2 md:absolute flex md:top-[15%] left-0 md:bottom-[15%] md:left-[40%] md:rounded-l-md rounded-none md:shadow-xl shadow-none'
         }
       >
-        <div
-          className={
-            'flex flex-col md:pt-14 pt-14 md:pl-48 h-screen px-6 md:pr-20'
-          }
-        >
-          {/* <div className={'flex items-center'}> */}
-          <h1 className={'text-5xl justify-start font-light font-Cormorant'}>
-            {t('aboutCompanyTitle')}
-          </h1>
-          {/* <img
-              src={LogoSVG}
+        <article className={'md:pl-36 md:pr-10 md:pt-10 px-6 py-20 static'}>
+          <div
+            className={
+              'flex relative align-middle justify-center flex-col h-full'
+            }
+          >
+            <h1
               className={
-                'left-[78%] top-[5%] hidden md:flex bg-port2 rounded-full absolute md:h-24 h-44'
+                'text-5xl mb-10 justify-start font-light font-Cormorant'
               }
-            /> */}
-          {/* </div> */}
-
-          <div className={'mt-8'}>
-            {paragraphs.map((paragraph, index) => (
-              <p
-                className={`text-lg mb-3 font-light font-Montserrat`}
-                key={index}
-              >
-                {paragraph}
-              </p>
-            ))}
+            >
+              {t('aboutCompanyTitle')}
+            </h1>
+            <div className={'grid gap-y-3'}>
+              {paragraphs.map((paragraph, index) => (
+                <p
+                  key={index}
+                  className={'lg:text-lg text-md font-light font-Montserrat'}
+                >
+                  {paragraph}
+                </p>
+              ))}
+            </div>
           </div>
-        </div>
+        </article>
       </div>
+
       <div
         className={
-          'absolute md:left-[10%] md:top-[20%] md:right-[50%] bottom-0 md:mx-0 mx-6 mb-5 md:mb-0'
+          'md:absolute md:left-[5%] md:top-[21%] md:right-[55%] md:mb-0 md:mx-0 flex px-6 justify-center'
         }
       >
-        <img src={ImageUncles} className={'w-full'} />
+        <img src={ImageUncles} className={'md:w-full w-[50%]'} />
       </div>
     </section>
   );

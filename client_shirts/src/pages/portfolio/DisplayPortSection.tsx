@@ -18,7 +18,7 @@ const DisplayPortSection = ({
 }: IShowPortfolio) => {
   return (
     <section
-      className={`${bg_color} flex min-h-screen justify-center items-center md:sticky relative top-0`}
+      className={`${bg_color} flex min-h-screen justify-center items-center md:sticky relative top-0 select-none`}
     >
       <div
         className={

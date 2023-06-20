@@ -42,14 +42,16 @@ const SmallMenu = ({ isToggle, onAuthIconChange }: ISmallMenu) => {
           <div className="overflow-hidden flex rounded-lg shadow-lg ring-1 ring-black ring-opacity-50">
             <div className={'relative bg-white p-2'}>
               {routesNavbar.map((nav, index) => (
-                <div
+                <ul
                   className={'p-2 hover:bg-neutral-200 hover:rounded-lg'}
                   key={index}
                 >
-                  <a onClick={handleChildToggle} href={`#${nav.id}`}>
-                    {t(`${nav.idTranslate}`)}
-                  </a>
-                </div>
+                  <li>
+                    <a onClick={handleChildToggle} href={`#${nav.id}`}>
+                      {t(`${nav.idTranslate}`)}
+                    </a>
+                  </li>
+                </ul>
               ))}
             </div>
           </div>

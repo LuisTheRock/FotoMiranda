@@ -22,7 +22,7 @@ const About = () => {
         <article className={'md:pl-36 md:pr-10 md:pt-10 px-6 py-20 static'}>
           <div
             className={
-              'flex relative align-middle justify-center flex-col h-full'
+              'flex relative align-middle justify-center flex-col h-full select-none'
             }
           >
             <h1
@@ -51,7 +51,10 @@ const About = () => {
           'md:absolute md:left-[5%] md:top-[21%] md:right-[55%] md:mb-0 md:mx-0 flex px-6 justify-center'
         }
       >
-        <img src={ImageUncles} className={'md:w-full w-[50%]'} />
+        <img
+          src={ImageUncles}
+          className={'md:w-full w-[50%] pointer-events-none'}
+        />
       </div>
     </section>
   );

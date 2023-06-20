@@ -33,7 +33,10 @@ const AuthIcon = ({ isToggle, onAuthIconChange }: IAuthIcon) => {
   return (
     <Popover className={'md:px-6 p-2'}>
       <Popover.Button className={`flex items-end ${layout.buttonInOut}`}>
-        <UserIcon onClick={handleChildToggle} className={'stroke-1 w-5 h-5'} />
+        <UserIcon
+          onClick={handleChildToggle}
+          className={'stroke-2 stroke-black w-5 h-5'}
+        />
       </Popover.Button>
       <Transition
         as={Fragment}

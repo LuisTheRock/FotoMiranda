@@ -13,7 +13,7 @@ const Field = ({ label, ...props }: any) => {
         <label htmlFor={field.name}>{label}</label>
         {field.name === 'message' ? (
           <textarea
-            className={`rounded border-gray-500 border shadow-none p-1 ${
+            className={`rounded border-gray-500 border shadow-none p-1 caret-red-500 ${
               meta.touched && meta.error && 'is-invalid'
             }`}
             {...field}

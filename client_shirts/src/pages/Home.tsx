@@ -5,7 +5,7 @@ import Carousel from '../components/ui/Carousel';
 
 const Home = () => (
   <section>
-    <div className={'h-screen relative select-none'}>
+    <main className={'h-screen relative select-none'}>
       <Carousel images={index} altName={'fotomiranda home'} />
 
       <article
@@ -21,7 +21,7 @@ const Home = () => (
           {t('principalHeader')}
         </h1>
       </article>
-    </div>
+    </main>
   </section>
 );
 

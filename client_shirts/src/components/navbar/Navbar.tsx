@@ -1,9 +1,11 @@
+import { t } from 'i18next';
 import { lazy, useState } from 'react';
 
+import { routesNavbar } from '../../data/Constants';
 import AuthIcon from '../../pages/auth/AuthIcon';
+import { layout } from '../../style';
 import { useSelector } from '../../utils/store';
 import LanguageSelector from './LanguageSelector';
-import RoutesNavbar from './RoutesNavbar';
 import SmallMenu from './SmallMenu';
 
 interface MenuState {
@@ -51,7 +53,16 @@ const Navbar = () => {
           <ul
             className={`list-none sm:flex hidden justify-end items-center flex-1`}
           >
-            <RoutesNavbar />
+            {routesNavbar.map((nav) => (
+              <li
+                key={nav.id}
+                className={`cursor-pointer text-black font-normal text-lg ${
+                  nav.id === 'about' ? 'pr-4' : 'px-4'
+                }  py-1 ${layout.buttonInOut}`}
+              >
+                <a href={`#${nav.id}`}>{t(`${nav.idTranslate}`)}</a>
+              </li>
+            ))}
           </ul>
           <ul className={'sm:flex hidden justify-end items-center'}>
             <AuthIcon

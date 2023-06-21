@@ -26,7 +26,7 @@ const VideosPage = () => {
             titleLayout={'col-start-1 col-end-13 text-center'}
           />
           <div className={'flex justify-center mt-10 h-fit'}>
-            <a href={'#about'}>
+            <a href={'#portfolio'}>
               <ArrowDownIcon
                 className={`md:w-32 w-20 md:h-32 md:mt-4 mt-0 md:p-7 p-4 stroke-black stroke-1 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full animate-bounce`}
               />

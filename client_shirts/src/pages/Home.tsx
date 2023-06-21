@@ -4,7 +4,7 @@ import { index } from '../assets/home';
 import Carousel from '../components/ui/Carousel';
 
 const Home = () => (
-  <section>
+  <div id={'home'}>
     <main className={'h-screen relative select-none'}>
       <Carousel images={index} altName={'fotomiranda home'} />
 
@@ -22,7 +22,7 @@ const Home = () => (
         </h1>
       </article>
     </main>
-  </section>
+  </div>
 );
 
 export default Home;

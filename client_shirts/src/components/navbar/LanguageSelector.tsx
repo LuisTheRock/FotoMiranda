@@ -9,6 +9,7 @@ import { layout } from '../../style';
 interface ILanguageSelector {
   isToggle: boolean;
   onAuthIconChange: (authIconState: boolean) => void;
+  currentColor: string;
 }
 
 /**
@@ -18,6 +19,7 @@ interface ILanguageSelector {
 const LanguageSelector = ({
   isToggle,
   onAuthIconChange,
+  currentColor,
 }: ILanguageSelector) => {
   const handleLanguageChange = (language: string) => {
     i18n.changeLanguage(language);
@@ -35,7 +37,7 @@ const LanguageSelector = ({
         className={`${layout.buttonInOut} flex items-end`}
         onClick={handleChildToggle}
       >
-        <GlobeAltIcon className={'w-5 h-5 stroke-black stroke-1'} />
+        <GlobeAltIcon className={`w-5 h-5 stroke-${currentColor} stroke-1`} />
       </Popover.Button>
 
       <Transition

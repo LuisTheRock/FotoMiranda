@@ -21,8 +21,6 @@ const FormContact = () => {
       values.cellphone
     );
 
-    console.log(email);
-
     mutate(email);
     formik.resetForm();
   };

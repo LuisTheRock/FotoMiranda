@@ -19,10 +19,13 @@ const Contacts = () => (
   <section id={'contacts'} className={'py-3 bg-white'}>
     <TitleSection
       title={'contactUsTitle'}
-      titleHeight_Font={'text-6xl font-light font-Cormorant'}
+      titleHeight_Font={'text-5xl font-light font-Cormorant'}
+      titleLayout={'md:col-start-3 md:col-end-10 col-start-1 col-end-12'}
     />
     <Section>
-      <div className={`${styles.colStart} md:col-end-6 col-end-13`}>
+      <div
+        className={`md:col-start-3 col-start-1 md:col-end-6 col-end-13 mt-6`}
+      >
         <FormContact />
       </div>
       <div className={`col-start-1 md:col-start-7 ${styles.colEnd}`}>

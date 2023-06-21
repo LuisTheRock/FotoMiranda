@@ -11,9 +11,10 @@ import { layout } from '../../style';
 interface IAuthIcon {
   isToggle: boolean;
   onAuthIconChange: (authIconState: boolean) => void;
+  currentColor: string;
 }
 
-const AuthIcon = ({ isToggle, onAuthIconChange }: IAuthIcon) => {
+const AuthIcon = ({ isToggle, onAuthIconChange, currentColor }: IAuthIcon) => {
   const { GetLoginFields } = FormFieldsGenerator();
   const { mutate } = Login();
 
@@ -35,7 +36,7 @@ const AuthIcon = ({ isToggle, onAuthIconChange }: IAuthIcon) => {
       <Popover.Button className={`flex items-end ${layout.buttonInOut}`}>
         <UserIcon
           onClick={handleChildToggle}
-          className={'stroke-2 stroke-black w-5 h-5'}
+          className={`stroke-1 stroke-${currentColor} w-5 h-5`}
         />
       </Popover.Button>
       <Transition

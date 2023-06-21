@@ -9,7 +9,7 @@ import { layout } from '../../style';
 interface ILanguageSelector {
   isToggle: boolean;
   onAuthIconChange: (authIconState: boolean) => void;
-  currentColor: string;
+  currentColor?: string;
 }
 
 /**

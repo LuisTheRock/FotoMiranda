@@ -11,7 +11,7 @@ import { layout } from '../../style';
 interface IAuthIcon {
   isToggle: boolean;
   onAuthIconChange: (authIconState: boolean) => void;
-  currentColor: string;
+  currentColor?: string;
 }
 
 const AuthIcon = ({ isToggle, onAuthIconChange, currentColor }: IAuthIcon) => {

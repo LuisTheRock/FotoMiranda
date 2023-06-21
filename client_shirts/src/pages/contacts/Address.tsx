@@ -1,5 +1,5 @@
-import Section from '../../components/ui/Section';
-import TitleSection from '../../components/ui/TitleSection';
+import { t } from 'i18next';
+
 import { ADDRESS, PHONE_NUMBERS_LIST } from '../../data/Constants';
 import { layout } from '../../style';
 
@@ -8,14 +8,12 @@ const Address = () => (
     <address>
       <p className={'font-Montserrat font-light text-lg mb-3'}>{ADDRESS}</p>
     </address>
-    <Section padding={'px-0 py-3'}>
-      <TitleSection
-        title={'cellphone'}
-        paddingProps={'px-0'}
-        titleHeight_Font={'text-xl font-Montserrat font-light'}
-        titleLayout={'col-start-1 md:col-end-3 col-end-4'}
-      />
-      <div className={'md:col-start-3 col-start-5 md:col-end-7 col-end-10'}>
+
+    <article className={'flex'}>
+      <h1 className={'text-xl font-Montserrat font-light mr-5'}>
+        {t('cellphone')}
+      </h1>
+      <div className={'flex flex-col mb-3'}>
         {PHONE_NUMBERS_LIST.map(({ number }, index) => (
           <label key={index} className={'flex mb-2'}>
             <a
@@ -27,7 +25,7 @@ const Address = () => (
           </label>
         ))}
       </div>
-    </Section>
+    </article>
   </section>
 );
 

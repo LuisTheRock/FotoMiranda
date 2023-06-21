@@ -16,11 +16,14 @@ import FormContact from './FormContact';
  * Also have a form that the user can fullfil to enter in contact with the company.
  */
 const Contacts = () => (
-  <section id={'contacts'} className={'py-3 bg-white'}>
+  <section id={'contacts'} className={'bg-white'}>
     <TitleSection
       title={'contactUsTitle'}
       titleHeight_Font={'text-5xl font-light font-Cormorant'}
-      titleLayout={'md:col-start-3 md:col-end-10 col-start-1 col-end-12'}
+      titleLayout={
+        'md:col-start-3 md:col-end-10 col-start-1 col-end-12 md:text-left text-center'
+      }
+      paddingProps={`${styles.paddingX} md:pt-10 pt-14`}
     />
     <Section>
       <div

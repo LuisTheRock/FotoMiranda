@@ -9,14 +9,9 @@ import { layout } from '../../style';
 interface ISmallMenu {
   isToggle: boolean;
   onAuthIconChange: (authIconState: boolean) => void;
-  currentColor: string;
 }
 
-const SmallMenu = ({
-  isToggle,
-  onAuthIconChange,
-  currentColor,
-}: ISmallMenu) => {
+const SmallMenu = ({ isToggle, onAuthIconChange }: ISmallMenu) => {
   const handleChildToggle = () => {
     const newChildState = !isToggle;
     onAuthIconChange(newChildState);
@@ -28,7 +23,7 @@ const SmallMenu = ({
         onClick={handleChildToggle}
         className={`flex items-center ${layout.buttonInOut}`}
       >
-        <Bars3Icon className={` w-5 h-5 stroke-1 stroke-${currentColor}`} />
+        <Bars3Icon className={` w-5 h-5 stroke-1 stroke-black`} />
       </Popover.Button>
       <Transition
         as={Fragment}

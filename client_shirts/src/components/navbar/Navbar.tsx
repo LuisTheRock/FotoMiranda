@@ -37,46 +37,6 @@ const Navbar = () => {
     });
   };
 
-  // Define the sections and their corresponding text colors
-  const sections = [
-    { id: 'home', color: 'white' },
-    { id: 'about', color: 'black' },
-  ];
-
-  // Initialize the state with the first section
-  const [currentSection, setCurrentSection] = useState(sections[0]);
-
-  // Define a function to check which section is in view
-  const checkSection = () => {
-    // Get the scroll position
-    const scrollY = window.scrollY;
-
-    // Loop through the sections and compare their offsets
-    for (let i = 0; i < sections.length; i++) {
-      // Get the element by id
-      const element = document.getElementById(sections[i].id);
-
-      // Get the element's offset and height
-      const offset = element!.offsetTop;
-      const height = element!.offsetHeight;
-
-      // Check if the scroll position is within the element's range
-      if (scrollY >= offset && scrollY < offset + height) {
-        // Update the state with the current section
-        setCurrentSection(sections[i]);
-        break;
-      }
-    }
-  };
-
-  // Add the event listener on mount and remove it on unmount
-  useEffect(() => {
-    window.addEventListener('scroll', checkSection);
-    return () => {
-      window.removeEventListener('scroll', checkSection);
-    };
-  }, []);
-
   return (
     <nav className={`flex h-full w-full justify-between`}>
       {isAuth ? (
@@ -98,10 +58,7 @@ const Navbar = () => {
                 key={nav.id}
                 className={`cursor-pointer  font-normal h-fit text-lg px-4 py-1 ${layout.buttonInOut}`}
               >
-                <a
-                  className={`text-${currentSection.color}`}
-                  href={`#${nav.id}`}
-                >
+                <a className={`text-black`} href={`#${nav.id}`}>
                   {t(`${nav.idTranslate}`)}
                 </a>
               </li>
@@ -111,12 +68,10 @@ const Navbar = () => {
             <AuthIcon
               isToggle={menuStates['2']}
               onAuthIconChange={() => handleClick('2')}
-              currentColor={`${currentSection.color}`}
             />
             <LanguageSelector
               isToggle={menuStates['3']}
               onAuthIconChange={() => handleClick('3')}
-              currentColor={`${currentSection.color}`}
             />
           </ul>
         </>
@@ -135,17 +90,14 @@ const Navbar = () => {
             <LanguageSelector
               isToggle={menuStates['3']}
               onAuthIconChange={() => handleClick('3')}
-              currentColor={`${currentSection.color}`}
             />
             <AuthIcon
               isToggle={menuStates['2']}
               onAuthIconChange={() => handleClick('2')}
-              currentColor={`${currentSection.color}`}
             />
             <SmallMenu
               isToggle={menuStates['1']}
               onAuthIconChange={() => handleClick('1')}
-              currentColor={`${currentSection.color}`}
             />
           </>
         )}

@@ -30,6 +30,11 @@ module.exports = {
         port2: '#D1C7BD',
         port3: '#D9D9D9',
         port4: '#EFE9E1',
+        bordon_1: '#76555C',
+        'jazz_berry-jam': '#9E0050',
+        swiss_coffee: '#DCD2C8',
+        black_pearl: '#192331',
+        paprika: '#7B2333',
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],

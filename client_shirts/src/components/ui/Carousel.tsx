@@ -25,13 +25,11 @@ const Carousel = ({
   const currentImage = images[currentIndex];
 
   return (
-    <div className={'overflow-hidden h-screen'}>
-      <img
-        src={currentImage}
-        alt={`${altName} ${currentIndex}`}
-        className={`object-cover brightness-50 w-full h-screen object-center pointer-events-none`}
-      />
-    </div>
+    <img
+      src={currentImage}
+      alt={`${altName} ${currentIndex}`}
+      className={`box-border flex-shrink-0 w-full h-fit block overflow-hidden opacity-40 bg-cover bg-no-repeat bg-center absolute pointer-events-none`}
+    />
   );
 };
 

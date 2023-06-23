@@ -4,25 +4,43 @@ import { index } from '../assets/home';
 import Carousel from '../components/ui/Carousel';
 
 const Home = () => (
-  <div id={'home'}>
-    <main className={'h-screen relative select-none'}>
-      <Carousel images={index} altName={'fotomiranda home'} />
-
-      <article
+  <section id={'home'}>
+    <div
+      className={
+        'box-border flex-shrink-0 w-full h-min flex flex-col justify-start items-center p-24 min-h-[800px] overflow-hidden relative content-center flex-nowrap rounded-none gap-3'
+      }
+    >
+      <h1
         className={
-          'flex w-full items-center bottom-10 justify-center absolute rounded-lg px-2 pt-1 '
+          'flex-shrink-0 w-full h-auto whitespace-pre relative font-normal font-DancingScript text-[80px] tracking-normal leading-[1.1] text-center'
         }
       >
-        <h1
+        CAPTURE YOUR MOMENTS
+      </h1>
+      <div
+        className={
+          'box-border flex-shrink-0 w-full h-min flex flex-row justify-between items-center pb-[50px] overflow-hidden z-10 flex-1 relative content-center flex-nowrap rounded-none'
+        }
+      >
+        <p
           className={
-            'text-center lg:text-5xl md:text-4xl text-3xl text-white font-normal font-DancingScript'
+            'flex-shrink-0 w-auto h-auto whitespace-pre relative font-normal font-mono  text-lg tracking-normal leading-tight'
           }
         >
-          {t('principalHeader')}
-        </h1>
-      </article>
-    </main>
-  </div>
+          Foto Miranda
+        </p>
+        <p>Let's Go</p>
+        <p>June 22, 2023</p>
+      </div>
+      <div
+        className={
+          'flex-shrink-0 w-full h-[500px] block grayscale overflow-hidden relative bg-cover bg-no-repeat bg-center rounded-[20px]'
+        }
+      >
+        OLA
+      </div>
+    </div>
+  </section>
 );
 
 export default Home;

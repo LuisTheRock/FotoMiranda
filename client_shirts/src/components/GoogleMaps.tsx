@@ -27,7 +27,7 @@ const GoogleMaps = ({ lat, lng, zoom }: IGoogleMaps) => {
         new google.maps.Marker({
           position: { lat: lat, lng: lng },
           map: map,
-          title: 'Palmirocha',
+          title: 'FotoMiranda',
           icon: {
             url: 'https://maps.gstatic.com/mapfiles/api-3/images/spotlight-poi.png',
             scaledSize: new google.maps.Size(20, 25),
@@ -39,12 +39,7 @@ const GoogleMaps = ({ lat, lng, zoom }: IGoogleMaps) => {
       });
   }, [lat, lng, zoom]);
 
-  return (
-    <div
-      ref={mapContainer}
-      className={'md:h-96 md:w-full w-full h-52 border-2 border-gray-400'}
-    />
-  );
+  return <div ref={mapContainer} className={'md:h-96 md:w-1/2 w-full h-52'} />;
 };
 
 export default GoogleMaps;

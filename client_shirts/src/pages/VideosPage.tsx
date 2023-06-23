@@ -5,24 +5,17 @@ import TitleSection from '../components/ui/TitleSection';
 
 const VideosPage = () => {
   return (
-    <section
-      id={'videos'}
-      className={'h-screen pb-5 bg-gradient-to-b from-black to-primary'}
-    >
+    <section id={'videos'} className={'h-screen'}>
       <Section>
         <div className={`col-start-2 col-end-12`}>
           <TitleSection
             title={'videosStage'}
-            titleHeight_Font={
-              'text-white font-Montserrat font-light text-4xl mt-10'
-            }
+            titleHeight_Font={'font-Montserrat font-light text-4xl mt-10'}
             titleLayout={'col-start-1 col-end-13 text-center'}
           />
           <TitleSection
             title={'videosStage1'}
-            titleHeight_Font={
-              'text-white font-Montserrat font-light text-4xl mt-10'
-            }
+            titleHeight_Font={'font-Montserrat font-light text-4xl mt-10'}
             titleLayout={'col-start-1 col-end-13 text-center'}
           />
           <div className={'flex justify-center mt-10 h-fit'}>

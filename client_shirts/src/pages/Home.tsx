@@ -1,45 +1,34 @@
 import { t } from 'i18next';
 
-import { index } from '../assets/home';
-import Carousel from '../components/ui/Carousel';
+import Header from '../components/Header';
 
 const Home = () => (
-  <section id={'home'}>
-    <div
+  <section
+    className={
+      'box-border flex-shrink-0 w-full h-min flex flex-col justify-start items-center md:p-24 p-5 min-h-[800px] overflow-hidden relative content-center flex-nowrap gap-0'
+    }
+  >
+    <Header />
+    <article
       className={
-        'box-border flex-shrink-0 w-full h-min flex flex-col justify-start items-center p-24 min-h-[800px] overflow-hidden relative content-center flex-nowrap rounded-none gap-3'
+        'flex-shrink-0 w-full h-min flex flex-col justify-center items-center overflow-visible flex-1 relative p-0 content-center flex-nowrap gap-[10px]'
       }
     >
       <h1
         className={
-          'flex-shrink-0 w-full h-auto whitespace-pre relative font-normal font-DancingScript text-[80px] tracking-normal leading-[1.1] text-center'
+          'flex-shrink-0 w-full h-auto whitespace-pre z-10 relative font-normal font-DancingScript md:text-8xl text-3xl tracking-normal uppercase leading-[1.1] text-center'
         }
       >
-        CAPTURE YOUR MOMENTS
+        {t('principalHeader')}
       </h1>
-      <div
+      <h2
         className={
-          'box-border flex-shrink-0 w-full h-min flex flex-row justify-between items-center pb-[50px] overflow-hidden z-10 flex-1 relative content-center flex-nowrap rounded-none'
+          'flex-shrink-0 w-full h-auto whitespace-pre z-10 relative font-normal font-[Manrope] text-sm md:tracking-[2em] tracking-widest leading-[1.1] text-center uppercase'
         }
       >
-        <p
-          className={
-            'flex-shrink-0 w-auto h-auto whitespace-pre relative font-normal font-mono  text-lg tracking-normal leading-tight'
-          }
-        >
-          Foto Miranda
-        </p>
-        <p>Let's Go</p>
-        <p>June 22, 2023</p>
-      </div>
-      <div
-        className={
-          'flex-shrink-0 w-full h-[500px] block grayscale overflow-hidden relative bg-cover bg-no-repeat bg-center rounded-[20px]'
-        }
-      >
-        OLA
-      </div>
-    </div>
+        {t('subHeader')}
+      </h2>
+    </article>
   </section>
 );
 

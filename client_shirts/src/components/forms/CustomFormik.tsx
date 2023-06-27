@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import ButtonSubmit from '../ui/ButtonSubmit';
 import Field from './Field';
 import { FormFields } from './FormFieldsGenerator';
-import { IFormFormik } from './IFormik';
+import { IFormFormik } from '../../interfaces/IFormik';
 import { t } from 'i18next';
 
 const CustomFormik = ({ functionToUse, onSubmit }: IFormFormik) => {
@@ -43,7 +43,9 @@ const CustomFormik = ({ functionToUse, onSubmit }: IFormFormik) => {
             )}
           </div>
         ))}
-        <p className={'font-Montserrat font-normal text-xs mb-5 mt-2'}>
+        <p
+          className={'font-Montserrat font-normal text-white text-xs mb-5 mt-2'}
+        >
           {t('necessaryField')}
         </p>
         <div className={'flex flex-grow'}>

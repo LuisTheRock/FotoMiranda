@@ -1,19 +1,24 @@
+import { t } from 'i18next';
 import Logo from '../assets/logo_desktop2.png';
 import Navbar from './navbar/Navbar';
-import Section from './ui/Section';
 
 const Header = () => (
-  <header className={'fixed z-10 w-full'}>
-    <Section otherProps={'w-full gap-y-1'} padding={'px-6'}>
-      <div className={'col-start-1 col-end-5'}>
-        <a href={'#'} className="absolute z-10">
-          <img src={Logo} alt={'Logo'} className={'w-40'} />
-        </a>
-      </div>
-      <div className={'col-start-6 col-end-13 items-end'}>
-        <Navbar />
-      </div>
-    </Section>
+  <header
+    className={
+      'box-border flex-shrink-0 w-full h-min flex flex-row justify-between items-center overflow-hidden relative z-10 content-center flex-nowrap'
+    }
+  >
+    <img src={Logo} alt={'Logo'} className={'w-40 h-auto'} />
+    <p
+      className={
+        'flex-shrink-0 w-auto h-auto whitespace-pre relative font-normal font-mono text-base tracking-normal leading-[1.2] hidden md:flex'
+      }
+    >
+      {t('navbarTitle')}
+    </p>
+    <div className="z-10">
+      <Navbar />
+    </div>
   </header>
 );
 

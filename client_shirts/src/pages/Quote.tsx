@@ -1,33 +1,23 @@
-import React from 'react';
+import { t } from 'i18next';
 
-import ImageUncles from '../assets/tios.jpg';
-import Carousel from '../components/ui/Carousel';
 import { index } from '../assets/home';
+import Carousel from '../components/ui/Carousel';
 
-const Quote = () => {
-  return (
-    <section
+const Quote = () => (
+  <section
+    className={
+      'box-border flex-shrink-0 w-full h-min flex flow-row justify-center items-center md:p-24 px-5 py-24 mix-blend-luminosity md:min-h-[600px] overflow-hidden flex-1 relative content-center flex-nowrap md:gap-[10px] gap-[40px]'
+    }
+  >
+    <Carousel images={index} altName={'fotomiranda home'} />
+    <h1
       className={
-        'box-border flex-shrink-0 w-full h-[300px] flex flow-row justify-center items-center mix-blend-luminosity min-h-[500px] overflow-hidden flex-1 relative content-center flex-nowrap gap-10'
+        'flex-shrink-0 flex-1 w-px h-auto whitespace-pre-wrap break-words max-w-[1000px] z-10 relative font-medium font-[Goblin-One] text-stone-600 md:text-[80px] text-4xl tracking-normal leading-[1.1] text-center'
       }
     >
-      <Carousel images={index} altName={'fotomiranda home'} />
-      {/* <img
-        src={ImageUncles}
-        alt={'fotoMiranda'}
-        className={
-          'box-border flex-shrink-0 w-full h-fit block overflow-hidden opacity-50 bg-cover bg-no-repeat bg-center absolute'
-        }
-      /> */}
-      <h1
-        className={
-          'flex-shrink-0 flex-1 w-full h-auto whitespace-pre-wrap break-words max-w-[800px] z-10 absolute font-normal font-serif text-gray-500 text-[80px] tracking-normal leading-[1.1] text-center'
-        }
-      >
-        Discover the world through our lens.
-      </h1>
-    </section>
-  );
-};
+      {t('quoteMessage')}
+    </h1>
+  </section>
+);
 
 export default Quote;

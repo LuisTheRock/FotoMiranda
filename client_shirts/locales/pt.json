@@ -1,22 +1,41 @@
 {
-  "routesNavbar1": "Portofólio",
-  "routesNavbar2": "Empresa",
-  "routesNavbar3": "Contactos",
+  "navbarTitle": "Vamos lá",
 
-  "principalHeader": "\"Criar memórias inesquecíveis para o vosso dia especial.\"",
-  "principalButton": "Curioso? Vamos explorar",
+  "principalHeader": "Capture os seus momentos",
+  "subHeader": "– Liberte os seus sentidos visuais –",
+
+  "quoteMessage": "Descubra o mundo através da nossa lente.",
+
+  "carouselSectionTitle": "Vislumbre as nossas obras-primas",
+  "carouselSectionBody": "Delicie-se com o nosso extraordinário carrossel de fotografias, criado com amor e paixão para contar a sua história como nunca antes.",
+
+  "teamTitle": "As nossas lentes",
+  "teamBody": "Conheça os profissionais talentosos que transformarão os momentos do seu casamento em obras-primas memoráveis.",
+
+  "teamMemberLead": "Fotógrafo principal",
+  "teamMemberVideo": "Videógrafo",
+
   "labelSend": "Enviar",
   "labelExit": "Sair",
 
-  "aboutCompanyTitle": "Quem somos?",
+  "aboutUsTitle": "Sobre nós",
   "aboutCompany1p": "Permitam que a vossa história seja contada com simplicidade e emoção, resultando em imagens transparentes e inesquecíveis.",
   "aboutCompany2p": "A Foto Miranda deseja participar do vosso casamento e eternizar o romantismo presente no ar. Sinónimo de qualidade e perfeição, a empresa dá o seu melhor para que a vossa celebração seja simplesmente memorável.",
   "aboutCompany3p": "Contudo, fotografamos e filmamos o vosso casamento com técnicas avançadas e equipamentos de última geração.",
   "aboutCompany4p": "O material será entregue em alta resolução, álbum digital personalizado. A empresa também atende outros eventos sociais, tais como batizados, comunhões, sessões de estúdio de bébes como sessões de grávidas.",
   "aboutCompany5p": "Se tiver alguma questão, por favor entre em contacto conosco.",
-  "aboutCompanyFull": "Permitam que a vossa história seja contada com simplicidade e emoção, resultando em imagens transparentes e inesquecíveis. A Foto Miranda deseja participar do vosso casamento e eternizar o romantismo presente no ar. Sinónimo de qualidade e perfeição, a empresa dá o seu melhor para que a vossa celebração seja simplesmente memorável. Contudo, fotografamos e filmamos o vosso casamento com técnicas avançadas e equipamentos de última geração. O material será entregue em alta resolução, álbum digital personalizado. A empresa também atende outros eventos sociais, tais como batizados, comunhões, sessões de estúdio de bébes como sessões de grávidas.",
 
-  "portfolioTitle": "Algums momentos",
+  "reachUsTitle": "Entre em contacto",
+  "reachUsBody": "Tem uma pergunta ou quer partilhar o seu momento favorito com a FotoMiranda? Não te contenhas! Deixe que o seu entusiasmo encha as nossas caixas de entrada, e nós prometemos que responderemos mais depressa do que um clique do obturador!",
+
+  "contactUsLabel": "Contacte-nos",
+  "reachUsLabel": "Alcançe-nos",
+
+  "footerRights": "Todos os direitos reservados",
+
+  "memoriesTitle": "memórias",
+  "memoriesBody": "Bem-vindo ao Carrossel de Memórias - o seu destino único para recordar momentos preciosos. Percorra a página seguinte para mergulhar no caleidoscópio de emoções e amor captado em fotografias.",
+  "memoriesButtonTitle": "Momentos de carinho",
   "portfolioSection1": "Amigos",
   "portfolioSection2": "Amor",
   "portfolioSection3": "Nascimento",
@@ -24,7 +43,7 @@
 
   "contactUsTitle": "Contacto",
   "contactUsSubtitle": "Localizada no concelho de Vila Nova de Gaia no distrito do Porto e com fáceis acessos provenientes da autoestrada, aqui encontram-se as nossas informações.",
-  "contactUsFormTitle": "Contacte-nos",
+
   "contactUsFormDescription": "Se desejar contactar-nos, por favor preencha o formulário abaixo com a sua informação e o seu pedido",
   "address": "Morada",
   "cellphone": "Telemóvel",

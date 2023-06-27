@@ -1,12 +1,8 @@
-import { t } from 'i18next';
-import { lazy, useEffect, useState } from 'react';
+import { lazy, useState } from 'react';
 
-import { routesNavbar } from '../../data/Constants';
 import AuthIcon from '../../pages/auth/AuthIcon';
-import { layout } from '../../style';
 import { useSelector } from '../../utils/store';
 import LanguageSelector from './LanguageSelector';
-import SmallMenu from './SmallMenu';
 
 interface MenuState {
   [key: string]: boolean;
@@ -38,70 +34,30 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`flex h-full w-full justify-between`}>
+    <nav className={`flex h-min w-min justify-end`}>
       {isAuth ? (
-        <ul
-          className={'list-none sm:flex hidden justify-end items-center flex-1'}
+        <div
+          className={
+            'list-none  sm:flex hidden justify-end items-center flex-1'
+          }
         >
           <NavbarAuthenticated
             isToggle={menuStates['3']}
             onAuthIconChange={() => handleClick('3')}
           />
-        </ul>
+        </div>
       ) : (
-        <>
-          <ul
-            className={`list-none sm:flex hidden justify-end items-center flex-1`}
-          >
-            {routesNavbar.map((nav) => (
-              <li
-                key={nav.id}
-                className={`cursor-pointer  font-normal h-fit text-lg px-4 py-1 ${layout.buttonInOut}`}
-              >
-                <a className={`text-black`} href={`#${nav.id}`}>
-                  {t(`${nav.idTranslate}`)}
-                </a>
-              </li>
-            ))}
-          </ul>
-          <ul className={'sm:flex hidden justify-end items-center'}>
-            <AuthIcon
-              isToggle={menuStates['2']}
-              onAuthIconChange={() => handleClick('2')}
-            />
-            <LanguageSelector
-              isToggle={menuStates['3']}
-              onAuthIconChange={() => handleClick('3')}
-            />
-          </ul>
-        </>
+        <ul className={'flex relative flex-row justify-end items-center'}>
+          <AuthIcon
+            isToggle={menuStates['2']}
+            onAuthIconChange={() => handleClick('2')}
+          />
+          <LanguageSelector
+            isToggle={menuStates['3']}
+            onAuthIconChange={() => handleClick('3')}
+          />
+        </ul>
       )}
-
-      <div className={'sm:hidden flex flex-1 justify-end items-center'}>
-        {isAuth ? (
-          <div className={'flex'}>
-            <NavbarAuthenticated
-              isToggle={menuStates['3']}
-              onAuthIconChange={() => handleClick('3')}
-            />
-          </div>
-        ) : (
-          <>
-            <LanguageSelector
-              isToggle={menuStates['3']}
-              onAuthIconChange={() => handleClick('3')}
-            />
-            <AuthIcon
-              isToggle={menuStates['2']}
-              onAuthIconChange={() => handleClick('2')}
-            />
-            <SmallMenu
-              isToggle={menuStates['1']}
-              onAuthIconChange={() => handleClick('1')}
-            />
-          </>
-        )}
-      </div>
     </nav>
   );
 };

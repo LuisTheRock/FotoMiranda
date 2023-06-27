@@ -5,8 +5,6 @@ import { useSelector } from 'react-redux';
 import { CustomToaster } from '../../components/CustomToaster';
 import { Footer } from '../../components/Footer';
 import Header from '../../components/Header';
-import Section from '../../components/ui/Section';
-import TitleSection from '../../components/ui/TitleSection';
 import styles from '../../style';
 import { RootState } from '../../utils/store';
 import AddAlbum from './AddAlbum';
@@ -28,25 +26,23 @@ const AdminHome = () => {
   return (
     <div>
       <Header />
-      <section className="mb-16">
+      <section className={'mb-16'}>
         {isAuth && (
-          <Section>
+          <main>
             <div className={`${styles.colStart} md:col-end-7 col-end-13`}>
               <AdminTable onClickButton={displayInfo} />
             </div>
             <div
               className={`md:col-start-8 col-start-1 ${styles.colEnd} md:py-0 py-4`}
             >
-              <TitleSection
-                title={t('registAlbum')}
-                titleHeight_Font={
-                  'text-5xl text-center font-Montserrat font-light'
-                }
-                paddingProps={`${styles.paddingTitleY}`}
-              />
+              <h1
+                className={`text-5xl text-center font-Montserrat font-light ${styles.paddingTitleY}`}
+              >
+                {t('registAlbum')}
+              </h1>
               <AddAlbum />
             </div>
-          </Section>
+          </main>
         )}
       </section>
       {showCard ? (

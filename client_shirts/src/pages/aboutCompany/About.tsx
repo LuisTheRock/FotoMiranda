@@ -1,8 +1,6 @@
-import { useTranslation } from 'react-i18next';
+import { t } from 'i18next';
 
 const About = () => {
-  const { t } = useTranslation();
-
   const paragraphs = [
     t('aboutCompany1p'),
     t('aboutCompany2p'),
@@ -14,7 +12,7 @@ const About = () => {
     <section
       id={'about'}
       className={
-        'box-border flex-shrink-0 w-full h-min flex flex-col justify-center items-center p-24 overflow-hidden relative content-center flex-nowrap gap-0'
+        'box-border flex-shrink-0 w-full h-min flex flex-col md:justify-center justify-start items-center md:p-24 px-5 py-10 md:flex-none flex-1 overflow-hidden relative content-center flex-nowrap gap-0'
       }
     >
       <main
@@ -27,7 +25,7 @@ const About = () => {
             'flex-shrink-0 w-full h-auto whitespace-pre break-words overflow-visible relative font-semibold font-Montserrat text-4xl tracking-normal leading-normal text-left'
           }
         >
-          About Us
+          {t('aboutUsTitle')}
         </h2>
         <div
           className={

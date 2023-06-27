@@ -10,40 +10,22 @@ import { PersistGate } from 'redux-persist/integration/react';
 
 import App from './App';
 import i18n from './i18n';
-import About from './pages/aboutCompany/About';
-import Contacts from './pages/contacts/Contacts';
 import ErrorPage from './pages/ErrorPage';
-import Home from './pages/Home';
-import Portfolio2 from './pages/portfolio/Portfolio2';
 import { persistor, store } from './utils/store';
 
 const AdminHome = lazy(() => import('./pages/admin/AdminHome'));
 const Profile = lazy(() => import('./pages/profile/Profile'));
+const FormContact = lazy(() => import('./pages/contacts/FormContact'));
+const Portfolio2 = lazy(() => import('./pages/portfolio/Portfolio2'));
+const Memories = lazy(() => import('./pages/portfolio/Memories'));
 
 const queryClient = new QueryClient();
+
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
     errorElement: <ErrorPage />,
-    children: [
-      {
-        path: '/',
-        element: <Home />,
-      },
-      {
-        path: '/portfolio',
-        element: <Portfolio2 />,
-      },
-      {
-        path: '/about',
-        element: <About />,
-      },
-      {
-        path: '/contacts',
-        element: <Contacts />,
-      },
-    ],
   },
   {
     path: '/adminHome',
@@ -53,6 +35,21 @@ const router = createBrowserRouter([
   {
     path: '/albumProfile/:id',
     element: <Profile />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: '/contact',
+    element: <FormContact />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: '/carousel',
+    element: <Portfolio2 />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: '/memories',
+    element: <Memories />,
     errorElement: <ErrorPage />,
   },
 ]);

@@ -50,11 +50,11 @@ const AuthIcon = ({ isToggle, onAuthIconChange, currentColor }: IAuthIcon) => {
       >
         <Popover.Panel
           className={
-            'absolute z-10  mt-5 max-w-sm -translate-x-3/4 transform px-2'
+            'absolute z-50 mt-5 max-w-sm -translate-x-3/4 transform px-2'
           }
         >
           <div className="overflow-hidden flex rounded-lg shadow-lg ring-1 ring-black ring-opacity-50">
-            <div className={'relative bg-white p-2'}>
+            <div className={'relative bg-black p-2'}>
               <CustomFormik
                 onSubmit={handleSubmit}
                 functionToUse={GetLoginFields}

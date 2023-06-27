@@ -4,10 +4,16 @@ import styles from '../../style';
 
 const ButtonSubmit = () => (
   <button
-    className={`p-4 box-content h-5 w-full text-white text-center bg-dark-pallid-green shadow-lg shadow-orange-600 hover:bg-gold hover:text-black ${styles.buttonInOut1}`}
+    className={`box-border flex-shrink-0 w-full h-10 flex flex-row justify-center items-center p-4 bg-white text-black overflow-visible relative content-center flex-nowrap gap-10 rounded-lg ${styles.buttonInOut1}`}
     type={'submit'}
   >
-    {t('labelSend')}
+    <p
+      className={
+        'flex-shrink-0 w-auto h-auto whitespace-pre relative font-normal font-mono text-md tracking-normal leading-tight text-center text-black'
+      }
+    >
+      {t('labelSend')}
+    </p>
   </button>
 );
 

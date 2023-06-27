@@ -1,6 +1,6 @@
+import { t } from 'i18next';
+
 import Carousel2 from '../../components/ui/Carousel2';
-import Section from '../../components/ui/Section';
-import TitleSection from '../../components/ui/TitleSection';
 import { layout } from '../../style';
 
 interface IShowPortfolio {
@@ -25,15 +25,18 @@ const DisplayPortSection = ({
           'flex-col md:pb-5 pb-20 flex w-full items-center justify-center'
         }
       >
-        <TitleSection
-          titleHeight_Font={'text-5xl text-center font-normal font-Cormorant'}
-          title={title}
-        />
-        <Section otherProps={'py-5'}>
+        <h1
+          className={
+            'flex-shrink-0 w-full h-auto whitespace-pre-wrap break-words max-w-full overflow-visible relative font-normal font-[Elsie] text-5xl tracking-normal leading-[1.2] text-center'
+          }
+        >
+          {t(title)}
+        </h1>
+        <section className={'py-5'}>
           <div className={`${layout.gridStartEnd} shadow-xl shadow-black`}>
             <Carousel2 images={images} altName={altName} />
           </div>
-        </Section>
+        </section>
       </div>
     </section>
   );

@@ -41,6 +41,7 @@ module.exports = {
         DancingScript: ['Dancing-Script', 'sans-serif'],
         Montserrat: ['Montserrat', 'sans-serif'],
         Cormorant: ['Cormorant', 'sans-serif'],
+        Margarine: ['Margarine', 'sans-serif'],
       },
     },
     screens: {

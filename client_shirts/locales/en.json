@@ -1,22 +1,41 @@
 {
-  "routesNavbar1": "Portfolio",
-  "routesNavbar2": "Company",
-  "routesNavbar3": "Contacts",
+  "navbarTitle": "Let's go",
 
-  "principalHeader": "\"Creating unforgettable memories for your special day.\"",
-  "principalButton": "Curious? Let's explore",
+  "principalHeader": "Capture your moments",
+  "subHeader": "– Unleash Your Visual Senses –",
+
+  "quoteMessage": "Discover the world through our lens.",
+
+  "carouselSectionTitle": "Glimpse Our Masterpieces",
+  "carouselSectionBody": "Delight in our extraordinary photo carousel, crafted with love and passion to tell your story like never before.",
+
+  "teamTitle": "Our Lenses",
+  "teamBody": "Meet the talented professionals who’ll turn your wedding moments into memorable masterpieces.",
+
+  "teamMemberLead": "Lead Photographer",
+  "teamMemberVideo": "Videographer",
+
   "labelSend": "Send",
   "labelExit": "Exit",
 
-  "aboutCompanyTitle": "Who we are?",
+  "aboutUsTitle": "About Us",
   "aboutCompany1p": "Allow your story to be told with simplicity and emotion, resulting in transparent and unforgettable images.",
   "aboutCompany2p": "Foto Miranda wants to participate in your wedding and eternalize the romanticism in the air. Synonymous with quality and perfection, the company does its best to make your celebration memorable.",
   "aboutCompany3p": "However, we photograph and film your wedding with advanced techniques and state-of-the-art equipment.",
   "aboutCompany4p": "The material will be delivered in high resolution, digital album. The company also caters to other social events, such as baptisms, communions, baby studio sessions, and pregnant sessions.",
   "aboutCompany5p": "If you have any questions please get in touch with us.",
-  "aboutCompanyFull": "Allow your story to be told with simplicity and emotion, resulting in transparent and unforgettable images. Foto Miranda wants to participate in your wedding and eternalize the romanticism in the air. Synonymous with quality and perfection, the company does its best to make your celebration memorable. However, we photograph and film your wedding with advanced techniques and state-of-the-art equipment. The material will be delivered in high resolution, digital album. The company also caters to other social events, such as baptisms, communions, baby studio sessions, and pregnant sessions.",
 
-  "portfolioTitle": "Some moments",
+  "reachUsTitle": "Get In Touch",
+  "reachUsBody": "Got a question or want to share your favorite moment with FotoMiranda? Don’t hold back! Let your excitement fill up our inboxes, and we promise, we’ll respond faster than a shutter click!",
+
+  "contactUsLabel": "Contact us",
+  "reachUsLabel": "Reach out to us",
+
+  "footerRights": "All rights reserved",
+
+  "memoriesTitle": "memories",
+  "memoriesBody": "Welcome to Memories Carousel - your one-stop destination for reminiscing precious moments. Scroll below to dive into the kaleidoscope of emotions and love captured in photographs.",
+  "memoriesButtonTitle": "Cherish Moments",
   "portfolioSection1": "Friends",
   "portfolioSection2": "Love",
   "portfolioSection3": "Birth",
@@ -24,7 +43,7 @@
 
   "contactUsTitle": "Contact",
   "contactUsSubtitle": "Located in Vila Nova de Gaia in the district of Porto and with easy access from the highway, here is our information.",
-  "contactUsFormTitle": "Contact us",
+
   "contactUsFormDescription": "If you wish to contact us, please fill out the form below with your information and the request",
   "address": "Address",
   "cellphone": "Cellphone",

@@ -1,13 +1,14 @@
-import { useEffect, useRef } from 'react';
 import { Loader } from '@googlemaps/js-api-loader';
+import { useEffect, useRef } from 'react';
 
 interface IGoogleMaps {
   lat: number;
   lng: number;
   zoom: number;
+  classNameProps: string;
 }
 
-const GoogleMaps = ({ lat, lng, zoom }: IGoogleMaps) => {
+const GoogleMaps = ({ lat, lng, zoom, classNameProps }: IGoogleMaps) => {
   const mapContainer = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -39,7 +40,7 @@ const GoogleMaps = ({ lat, lng, zoom }: IGoogleMaps) => {
       });
   }, [lat, lng, zoom]);
 
-  return <div ref={mapContainer} className={'md:h-96 md:w-1/2 w-full h-52'} />;
+  return <div ref={mapContainer} className={classNameProps} />;
 };
 
 export default GoogleMaps;

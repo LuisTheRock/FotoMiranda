@@ -32,14 +32,10 @@ const LanguageSelector = ({
   };
 
   return (
-    <Popover className={'flex relative max-w-sm md:pl-2 p-2'}>
-      <Popover.Button
-        className={`${layout.buttonInOut} flex items-end`}
-        onClick={handleChildToggle}
-      >
-        <GlobeAltIcon className={`w-5 h-5 stroke-${currentColor} stroke-1`} />
+    <Popover className={'relative'}>
+      <Popover.Button className={`${layout.buttonInOut}`}>
+        <GlobeAltIcon className={'w-5 h-5'} onClick={handleChildToggle} />
       </Popover.Button>
-
       <Transition
         as={Fragment}
         enter={'transition ease-out duration-200'}
@@ -50,29 +46,27 @@ const LanguageSelector = ({
         leaveTo={'opacity-0 translate-y-1'}
       >
         <Popover.Panel
-          className={
-            'absolute flex left-1/2 z-10 mt-10 max-w-sm -translate-x-1/2 transform px-2 sm:px-0 lg:max-w-3xl'
-          }
+          className={'absolute z-50 mt-5 max-w-sm -translate-x-full transform'}
+          static
         >
-          <div className="overflow-hidden flex rounded-lg shadow-lg ring-1 ring-black ring-opacity-50">
-            <div className={'relative bg-white p-4'}>
+          <div
+            className={'relative flex rounded-lg p-2 bg-stone-800 text-white'}
+          >
+            <ul className={'list-none'}>
               {languagesOption.map(({ language, name }, index) => (
-                <button
-                  key={index}
-                  onClick={() => handleLanguageChange(language)}
-                  className={
-                    '-m-3 flex p-3 hover:bg-neutral-200 hover:rounded-md items-center text-center'
-                  }
-                >
-                  <div className={'h-5 w-5'}>
-                    <GlobeAltIcon />
-                  </div>
-                  <div className={'ml-4'}>
-                    <p className={'font-poppins'}>{name}</p>
-                  </div>
-                </button>
+                <li className={'mb-2'} key={index}>
+                  <button
+                    className={'flex items-center px-2 py-1'}
+                    onClick={() => handleLanguageChange(language)}
+                  >
+                    <span className={'mr-2 w-5'}>
+                      <GlobeAltIcon />
+                    </span>
+                    <span>{name}</span>
+                  </button>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </Popover.Panel>
       </Transition>

@@ -1,8 +1,8 @@
+import { XMarkIcon } from '@heroicons/react/24/outline';
 import toast from 'react-hot-toast';
 
 import CarouselBackend from '../../components/ui/CarouselBackend';
 import { GetAlbumProfileInfo } from '../../data/hooks/useAlbumProfile';
-import { XMarkIcon } from '@heroicons/react/24/outline';
 
 export interface ICardAlbum {
   id: number;
@@ -20,7 +20,7 @@ const SeeAlbum = ({ onClose, id }: ICardAlbum) => {
   return (
     <div
       className={
-        'absolute bg-white justify-center mx-1 md:top-11 top-20 md:right-1/4 right-0 md:w-2/4 w-fit p-2 border-[1px] border-black rounded-md overflow-hidden'
+        'absolute flex flex-col gap-2 z-50 bg-pallid-green justify-center top-10 right-1/4 w-2/4 p-2 ring-1 ring-black rounded-md'
       }
     >
       <XMarkIcon

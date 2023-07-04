@@ -63,7 +63,9 @@ export class AlbumService {
     try {
       const { albumName, albumPassword, role, images } = album;
 
-      await createAlbumFolder(albumName, images);
+      if (role === 'user') {
+        await createAlbumFolder(albumName, images);
+      }
 
       const hash = await bcrypt.hash(albumPassword, 10);
       await Album.create({

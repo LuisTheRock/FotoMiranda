@@ -7,13 +7,7 @@ type ImageProps = {
 };
 
 const ImageComp = memo(({ src, alt, divProps }: ImageProps) => (
-  <div className={`overflow-hidden ${divProps}`}>
-    <img
-      src={src}
-      alt={alt}
-      className={`object-cover w-full h-full pointer-events-none`}
-    />
-  </div>
+  <img src={src} alt={alt} className={'w-auto h-[600px] rounded-xl'} />
 ));
 
 export default ImageComp;

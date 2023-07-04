@@ -12,7 +12,6 @@ import Image11 from '../wedding/4_11.jpg';
 import Image12 from '../wedding/4_12.jpg';
 import Image13 from '../wedding/4_13.jpg';
 import Image14 from '../wedding/4_14.jpg';
-import Image15 from '../wedding/4_15.jpg';
 
 export const indexWedding = [
   Image1,
@@ -29,5 +28,4 @@ export const indexWedding = [
   Image12,
   Image13,
   Image14,
-  Image15,
 ];

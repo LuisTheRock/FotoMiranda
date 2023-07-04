@@ -1,4 +1,5 @@
 import { FormikHelpers } from 'formik';
+import { t } from 'i18next';
 
 import { CustomToaster } from '../../components/CustomToaster';
 import CustomFormik from '../../components/forms/CustomFormik';
@@ -30,9 +31,17 @@ const AddAlbum = () => {
   };
 
   return (
-    <div className={'bg-blue-200 border-[1px] border-black p-2'}>
-      <CustomFormik onSubmit={handleSubmit} functionToUse={GetAddAlbumFields} />
-      <CustomToaster />
+    <div className={'md:w-min w-full flex flex-col gap-10'}>
+      <h1 className={`text-4xl text-center font-Dosis font-light`}>
+        {t('registAlbum')}
+      </h1>
+      <div className={'bg-blue-200 ring-1 ring-black p-2 rounded-xl'}>
+        <CustomFormik
+          onSubmit={handleSubmit}
+          functionToUse={GetAddAlbumFields}
+        />
+        <CustomToaster />
+      </div>
     </div>
   );
 };

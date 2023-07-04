@@ -9,35 +9,31 @@ const About = () => {
   ];
 
   return (
-    <section
-      id={'about'}
-      className={
-        'box-border flex-shrink-0 w-full h-min flex flex-col md:justify-center justify-start items-center md:p-24 px-5 py-10 md:flex-none flex-1 overflow-hidden relative content-center flex-nowrap gap-0'
-      }
-    >
-      <main
+    <article className={'group relative flex flex-col items-start'}>
+      <h2
         className={
-          'flex-shrink-0 w-full h-min flex flex-col justify-start items-start overflow-hidden relative p-0 content-start flex-nowrap gap-10'
+          'text-3xl mb-3 font-normal font-Dosis tracking-tight text-zinc-800 dark:text-zinc-100'
         }
       >
-        <h2
-          className={
-            'flex-shrink-0 w-full h-auto whitespace-pre break-words overflow-visible relative font-semibold font-Montserrat text-4xl tracking-normal leading-normal text-left'
-          }
-        >
-          {t('aboutUsTitle')}
-        </h2>
+        <span className={'relative z-10'}>{t('aboutUsTitle')}</span>
         <div
           className={
-            'flex-shrink-0 w-[800px] h-auto whitespace-pre-wrap break-words max-w-full relative font-normal font-mono text-lg tracking-normal leading-normal text-left'
+            'absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl'
           }
+        />
+      </h2>
+
+      {paragraphs.map((paragraph, index) => (
+        <p
+          className={
+            'mt-3 relative z-10 font-Montserrat font-light text-sm text-zinc-600 dark:text-zinc-400'
+          }
+          key={index}
         >
-          {paragraphs.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
-          ))}
-        </div>
-      </main>
-    </section>
+          {paragraph}
+        </p>
+      ))}
+    </article>
   );
 };
 

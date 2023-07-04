@@ -1,9 +1,9 @@
 import { Popover, Transition } from '@headlessui/react';
-import { ChevronDownIcon, UserIcon } from '@heroicons/react/24/outline';
+import { UserIcon } from '@heroicons/react/24/outline';
 import { Fragment } from 'react';
 
-import CustomFormik from '../../components/forms/CustomFormik';
-import FormFieldsGenerator from '../../components/forms/FormFieldsGenerator';
+import CustomFormik from '../forms/CustomFormik';
+import FormFieldsGenerator from '../forms/FormFieldsGenerator';
 import Album from '../../data/Album';
 import { Login } from '../../data/hooks/useLogin';
 import { layout } from '../../style';
@@ -32,11 +32,11 @@ const AuthIcon = ({ isToggle, onAuthIconChange, currentColor }: IAuthIcon) => {
   };
 
   return (
-    <Popover className={'md:px-6 p-2'}>
-      <Popover.Button className={`flex items-end ${layout.buttonInOut}`}>
+    <Popover className={'px-6 relative'}>
+      <Popover.Button className={`${layout.buttonInOut}`}>
         <UserIcon
           onClick={handleChildToggle}
-          className={`stroke-1 stroke-${currentColor} w-5 h-5`}
+          className={`stroke-${currentColor} w-5 h-5`}
         />
       </Popover.Button>
       <Transition
@@ -49,12 +49,12 @@ const AuthIcon = ({ isToggle, onAuthIconChange, currentColor }: IAuthIcon) => {
         leaveTo={'opacity-0 translate-y-1'}
       >
         <Popover.Panel
-          className={
-            'absolute z-50 mt-5 max-w-sm -translate-x-3/4 transform px-2'
-          }
+          className={'z-50 absolute mt-5 max-w-sm -translate-x-3/4 transform'}
         >
-          <div className="overflow-hidden flex rounded-lg shadow-lg ring-1 ring-black ring-opacity-50">
-            <div className={'relative bg-black p-2'}>
+          <div
+            className={'relative p-2 flex rounded-lg shadow-lg bg-stone-800'}
+          >
+            <div className={'relative p-2'}>
               <CustomFormik
                 onSubmit={handleSubmit}
                 functionToUse={GetLoginFields}

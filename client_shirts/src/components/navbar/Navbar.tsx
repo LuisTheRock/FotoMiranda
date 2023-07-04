@@ -1,6 +1,6 @@
 import { lazy, useState } from 'react';
 
-import AuthIcon from '../../pages/auth/AuthIcon';
+import AuthIcon from './AuthIcon';
 import { useSelector } from '../../utils/store';
 import LanguageSelector from './LanguageSelector';
 
@@ -21,7 +21,6 @@ const Navbar = () => {
   const initialMenuStates: MenuState = {
     menu1: false,
     menu2: false,
-    menu3: false,
   };
   const [menuStates, setMenuStates] = useState<MenuState>(initialMenuStates);
 
@@ -36,25 +35,23 @@ const Navbar = () => {
   return (
     <nav className={`flex h-min w-min justify-end`}>
       {isAuth ? (
-        <div
+        <NavbarAuthenticated
+          isToggle={menuStates['2']}
+          onAuthIconChange={() => handleClick('2')}
+        />
+      ) : (
+        <ul
           className={
-            'list-none  sm:flex hidden justify-end items-center flex-1'
+            'flex items-center content-center relative flex-row justify-end'
           }
         >
-          <NavbarAuthenticated
-            isToggle={menuStates['3']}
-            onAuthIconChange={() => handleClick('3')}
-          />
-        </div>
-      ) : (
-        <ul className={'flex relative flex-row justify-end items-center'}>
           <AuthIcon
-            isToggle={menuStates['2']}
-            onAuthIconChange={() => handleClick('2')}
+            isToggle={menuStates['1']}
+            onAuthIconChange={() => handleClick('1')}
           />
           <LanguageSelector
-            isToggle={menuStates['3']}
-            onAuthIconChange={() => handleClick('3')}
+            isToggle={menuStates['2']}
+            onAuthIconChange={() => handleClick('2')}
           />
         </ul>
       )}

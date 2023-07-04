@@ -1,11 +1,8 @@
 import { t } from 'i18next';
+
 import PhotoMemories from '../../assets/Bloglovin’.jfif';
-import { indexFriends } from '../../assets/portfolio/friends/indexFriends';
-import { indexLove } from '../../assets/portfolio/love/indexLove';
-import { indexNascimento } from '../../assets/portfolio/nascimento/indexNascimento';
-import { indexWedding } from '../../assets/portfolio/wedding/IndexWedding';
 import { Footer } from '../../components/Footer';
-import DisplayPortSection from './DisplayPortSection';
+import PortfolioCarousel from './PortfolioCarousel';
 
 const Memories = () => (
   <>
@@ -26,14 +23,14 @@ const Memories = () => (
         >
           <h1
             className={
-              'flex-shrink-0 w-full h-auto whitespace-pre relative font-normal font-[Elise] md:text-7xl text-6xl tracking-normal uppercase leading-[1] md:text-left text-center'
+              'flex-shrink-0 w-full h-auto whitespace-pre relative font-normal font-[Elise] laptops:text-7xl text-6xl tracking-normal uppercase leading-[1] md:text-left text-center'
             }
           >
             {t('memoriesTitle')}
           </h1>
           <p
             className={
-              'flex-shrink-0 w-full h-auto whitespace-pre-wrap break-words relative font-normal font-[ALbert-Sans, Albert-Sans-Placeholder] text-xl tracking-normal leading-[1.4] md:text-left text-center'
+              'flex-shrink-0 w-full h-auto whitespace-pre-wrap break-words relative font-normal font-[Albert-Sans-Placeholder] text-xl tracking-normal leading-[1.4] md:text-left text-center'
             }
           >
             {t('memoriesBody')}
@@ -64,39 +61,11 @@ const Memories = () => (
       </main>
     </section>
 
-    <div className={'md:px-24 px-5 py-14'} id={'carousels'}>
-      <DisplayPortSection
-        // bg_color={'bg-port4'}
-        // bg_color={'bg-gradient-to-br from-pink-400 via-purple-300 to-blue-200'}
-        bg_color={'bg-white'}
-        title={'portfolioSection4'}
-        images={indexWedding}
-        altName={'fotoMiranda weeding'}
-      />
-      <DisplayPortSection
-        // bg_color={'bg-port1'}
-        bg_color={'bg-white'}
-        title={'portfolioSection1'}
-        images={indexFriends}
-        altName={'fotoMiranda friends'}
-      />
-      <DisplayPortSection
-        // bg_color={'bg-port2'}
-        // bg_color={'bg-gradient-to-br from-red-500 via-red-400 to-red-300'}
-        bg_color={'bg-white'}
-        title={'portfolioSection2'}
-        images={indexLove}
-        altName={'fotoMiranda love'}
-      />
-      <DisplayPortSection
-        // bg_color={'bg-port3'}
-        // bg_color={'bg-gradient-to-br from-white to-sky-200'}
-        bg_color={'bg-white'}
-        title={'portfolioSection3'}
-        images={indexNascimento}
-        altName={'fotoMiranda birth'}
-      />
-    </div>
+    <PortfolioCarousel
+      idProps={'carousels'}
+      classNameProps={'md:px-24 px-5 py-14'}
+    />
+
     <Footer />
   </>
 );

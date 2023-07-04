@@ -16,7 +16,9 @@ import { persistor, store } from './utils/store';
 const AdminHome = lazy(() => import('./pages/admin/AdminHome'));
 const Profile = lazy(() => import('./pages/profile/Profile'));
 const FormContact = lazy(() => import('./pages/contacts/FormContact'));
-const Portfolio2 = lazy(() => import('./pages/portfolio/Portfolio2'));
+const PortfolioCarousel = lazy(
+  () => import('./pages/portfolio/PortfolioCarousel')
+);
 const Memories = lazy(() => import('./pages/portfolio/Memories'));
 
 const queryClient = new QueryClient();
@@ -40,11 +42,6 @@ const router = createBrowserRouter([
   {
     path: '/contact',
     element: <FormContact />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: '/carousel',
-    element: <Portfolio2 />,
     errorElement: <ErrorPage />,
   },
   {

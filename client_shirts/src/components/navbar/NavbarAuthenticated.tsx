@@ -8,7 +8,7 @@ interface INavbarAuth {
 
 const NavbarAuthenticated = ({ isToggle, onAuthIconChange }: INavbarAuth) => {
   return (
-    <div className={'flex'}>
+    <div className={'flex flex-row gap-5'}>
       <LanguageSelector
         isToggle={isToggle}
         onAuthIconChange={onAuthIconChange}

@@ -9,12 +9,7 @@ type NavigationButtonProps = {
 const NavigationButton = memo(
   ({ direction, onClick }: NavigationButtonProps) => {
     return (
-      <button
-        className={
-          'bg-gray-800 text-white rounded-full p-2 hover:bg-gray-900 focus:outline-none transition ease-in duration-200'
-        }
-        onClick={onClick}
-      >
+      <a onClick={onClick}>
         {direction === 'left' ? (
           <ChevronLeftIcon
             className={'w-6 h-6 md:w-8 md:h-8 stroke-white stroke-2'}
@@ -24,7 +19,7 @@ const NavigationButton = memo(
             className={'w-6 h-6 md:w-8 md:h-8 stroke-white stroke-2'}
           />
         )}
-      </button>
+      </a>
     );
   }
 );

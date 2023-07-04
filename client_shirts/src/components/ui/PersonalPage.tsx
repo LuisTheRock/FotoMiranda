@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface IPersonalPage {
   src: string;
   alt: string;
@@ -7,42 +5,34 @@ interface IPersonalPage {
   role: string;
 }
 
-const PersonalPage = ({ src, alt, personName, role }: IPersonalPage) => {
-  return (
-    <div
+const PersonalPage = ({ src, alt, personName, role }: IPersonalPage) => (
+  <section
+    className={
+      'box-border flex-shrink-0 h-[300px] flex flex-col justify-center items-center p-10 bg-[#323144] overflow-visible relative content-center flex-nowrap gap-10 rounded-3xl text-white'
+    }
+  >
+    <img
+      src={src}
+      alt={alt}
       className={
-        'box-border flex-shrink-0 flex-1 h-[300px] flex flex-col justify-center items-center p-10 bg-[#323144] overflow-visible relative content-center flex-nowrap gap-5 rounded-[30px]'
+        'w-[80px] h-[80px] block aspect-square bg-cover bg-no-repeat bg-center rounded-full'
       }
-    >
-      <img
-        src={src}
-        alt={alt}
+    />
+    <article className={'flex-shrink-0 flex flex-col justify-center gap-3'}>
+      <h3
         className={
-          'flex-shrink-0 w-[80px] h-[80px] block overflow-hidden relative aspect-square bg-cover bg-no-repeat bg-center rounded-[64px]'
-        }
-      />
-      <div
-        className={
-          'flex-shrink-0 w-full h-min flex flex-col justify-start items-center overflow-hidden flex-1 relative p-0 content-center flex-nowrap gap-2'
+          'inline-flex justify-center font-normal font-Dosis text-xl leading-[1.4] uppercase'
         }
       >
-        <h3
-          className={
-            'flex-shrink-0 w-full h-min whitespace-pre-wrap break-words overflow-visible flex-1 relative font-normal font-serif text-white text-xl tracking-normal leading-[1.4] uppercase text-center'
-          }
-        >
-          {personName}
-        </h3>
-        <p
-          className={
-            'flex-shrink-0 w-full h-auto whitespace-pre-wrap break-words overflow-visible flex-1 relative font-normal font-mono text-white text-base tracking-normal leading-normal text-center'
-          }
-        >
-          {role}
-        </p>
-      </div>
-    </div>
-  );
-};
+        {personName}
+      </h3>
+      <span
+        className={'inline-flex justify-center font-normal font-Montserrat'}
+      >
+        {role}
+      </span>
+    </article>
+  </section>
+);
 
 export default PersonalPage;

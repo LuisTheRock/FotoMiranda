@@ -1,7 +1,7 @@
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 import { useCallback, useEffect, useState } from 'react';
 
 import ImageComp from './ImageComp';
-import NavigationButton from './NavigationButton';
 
 interface IImage {
   filename: string;
@@ -35,25 +35,32 @@ const CarouselBackend = ({ images, interval = 5000 }: IAlbumProfileInfo) => {
   const currentImage = images[currentIndex];
 
   return (
-    <div className={'relative py-3'}>
-      <ImageComp
+    <div className={'relative flex justify-center'}>
+      <img
         src={`data:image/png;base64,${currentImage.data}`}
         alt={currentImage.filename}
+        className={'w-auto h-[600px] rounded-xl'}
       />
-      <div
+      <a
+        onClick={handlePrevClick}
         className={
-          'absolute inset-y-1/2 left-0 flex items-center justify-center w-12 md:w-16'
+          'absolute h-full bg-black/20 rounded-l-xl left-0 flex items-center justify-center p-2 hover:bg-black/50'
         }
       >
-        <NavigationButton direction={'left'} onClick={handlePrevClick} />
-      </div>
-      <div
+        <ChevronLeftIcon
+          className={'w-6 h-6 md:w-8 md:h-8 stroke-white stroke-2'}
+        />
+      </a>
+      <a
+        onClick={handleNextClick}
         className={
-          'absolute inset-y-1/2 right-0 flex items-center justify-center w-12 md:w-16'
+          'absolute h-full bg-black/20 rounded-r-xl right-0 flex items-center justify-center p-2 hover:bg-black/50'
         }
       >
-        <NavigationButton direction={'right'} onClick={handleNextClick} />
-      </div>
+        <ChevronRightIcon
+          className={'w-6 h-6 md:w-8 md:h-8 stroke-white stroke-2'}
+        />
+      </a>
     </div>
   );
 };

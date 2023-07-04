@@ -42,6 +42,7 @@ module.exports = {
         Montserrat: ['Montserrat', 'sans-serif'],
         Cormorant: ['Cormorant', 'sans-serif'],
         Margarine: ['Margarine', 'sans-serif'],
+        Dosis: ['Dosis', 'sans-serif'],
       },
     },
     screens: {
@@ -51,6 +52,9 @@ module.exports = {
       md: '1060px',
       lg: '1200px',
       xl: '1700px',
+      laptops: '1200px',
+      tablets: '810px',
+      phone: '390px',
     },
   },
   variants: {},

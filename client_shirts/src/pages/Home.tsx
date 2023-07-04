@@ -1,34 +1,29 @@
 import { t } from 'i18next';
 
-import Header from '../components/Header';
-
 const Home = () => (
-  <section
-    className={
-      'box-border flex-shrink-0 w-full h-min flex flex-col justify-start items-center md:p-24 p-5 min-h-[800px] overflow-hidden relative content-center flex-nowrap gap-0'
-    }
-  >
-    <Header />
-    <article
-      className={
-        'flex-shrink-0 w-full h-min flex flex-col justify-center items-center overflow-visible flex-1 relative p-0 content-center flex-nowrap gap-[10px]'
-      }
-    >
-      <h1
-        className={
-          'flex-shrink-0 w-full h-auto whitespace-pre z-10 relative font-normal font-DancingScript md:text-8xl text-3xl tracking-normal uppercase leading-[1.1] text-center'
-        }
-      >
-        {t('principalHeader')}
-      </h1>
-      <h2
-        className={
-          'flex-shrink-0 w-full h-auto whitespace-pre z-10 relative font-normal font-[Manrope] text-sm md:tracking-[2em] tracking-widest leading-[1.1] text-center uppercase'
-        }
-      >
-        {t('subHeader')}
-      </h2>
-    </article>
+  <section className={'sm:px-8 mt-9 h-[400px]'}>
+    <div className={'mx-auto max-w-7xl lg:px-8'}>
+      <div className={'relative px-4 sm:px-8 lg:px-12'}>
+        <div className={'mx-auto max-w-2xl lg:max-w-5xl'}>
+          <div className={'mx-w-2xl flex flex-col items-center'}>
+            <h1
+              className={
+                'md:text-5xl text-4xl font-normal font-DancingScript tracking-normal text-zinc- dark:text-zinc-100 uppercase'
+              }
+            >
+              {t('principalHeader')}
+            </h1>
+            <h2
+              className={
+                'mt-6 font-normal text-base font-[Manrope] tracking-thin text-zinc-600 dark:text-zinc-400 uppercase'
+              }
+            >
+              {t('subHeader')}
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 );
 

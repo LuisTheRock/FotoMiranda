@@ -1,12 +1,11 @@
+import { ArrowRightOnRectangleIcon } from '@heroicons/react/24/outline';
 import { t } from 'i18next';
+import { toast } from 'react-hot-toast';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 import { setLogin } from '../../actions/auth-actions';
 import { layout } from '../../style';
-import { toast } from 'react-hot-toast';
-
-import { ArrowRightOnRectangleIcon } from '@heroicons/react/24/outline';
 
 const ButtonLogOut = () => {
   const dispatch = useDispatch();
@@ -19,8 +18,11 @@ const ButtonLogOut = () => {
   }
 
   return (
-    <div className={`p-2 ${layout.buttonInOut}`}>
-      <ArrowRightOnRectangleIcon className={`w-5 h-5`} onClick={handleLogout}>
+    <div className={`${layout.buttonInOut}`}>
+      <ArrowRightOnRectangleIcon
+        className={`w-5 h-5 cursor-pointer`}
+        onClick={handleLogout}
+      >
         {t('labelExit')}
       </ArrowRightOnRectangleIcon>
     </div>

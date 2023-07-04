@@ -1,7 +1,6 @@
 import { t } from 'i18next';
 
 import ImageUncles from '../../assets/tios.jpg';
-import PersonalPage from '../../components/ui/PersonalPage';
 
 const personsWork = [
   {
@@ -22,48 +21,44 @@ const personsWork = [
 ];
 
 const Team = () => (
-  <section
-    className={
-      'box-border flex-shrink-0 w-full h-min flex flex-col justify-center items-center md:p-24 px-5 py-[60px] overflow-hidden flex-1 relative content-center flex-nowrap md:gap-[60px] gap-[40px]'
-    }
+  <div
+    className={'rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40'}
   >
-    <title
+    <h2
       className={
-        'flex-shrink-0 w-full h-min flex flex-col justify-start items-center max-w-full overflow-hidden flex-1 relative p-0 content-center flex-nowrap md:gap-[10px] gap-[20px]'
+        'flex text-xl font-normal text-zinc-900 font-Dosis dark:text-zinc-100'
       }
     >
-      <h2
-        className={
-          'flex-shrink-0 w-full h-auto whitespace-pre-wrap break-words overflow-visible flex-1 relative font-normal font-serif md:text-5xl text-4xl tracking-normal leading-tight text-center'
-        }
-      >
-        {t('teamTitle')}
-      </h2>
-      <h2
-        className={
-          'flex-shrink-0 w-[600px] h-auto whitespace-pre-wrap break-words max-w-full overflow-visible relative font-normal font-mono text-lg tracking-normal leading-normal text-center'
-        }
-      >
-        {t('teamBody')}
-      </h2>
-    </title>
-    <article
-      className={
-        'flex-shrink-0 w-full h-min flex md:flex-row flex-col justify-center items-center max-w-full overflow-visible flex-1 relative p-0 content-center flex-nowrap md:gap-[10px] gap-[20px]'
-      }
-    >
+      {t('teamTitle')}
+    </h2>
+    <ol className={'mt-6 space-y-4'}>
       {personsWork.map(({ src, personName, role }, index) => (
-        <div key={index}>
-          <PersonalPage
-            src={src}
-            alt={'fotoMiranda'}
-            personName={personName}
-            role={role}
-          />
-        </div>
+        <li className={'flex gap-4'} key={index}>
+          <div
+            className={
+              'relative mt-1 flex h-16 w-16 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0'
+            }
+          >
+            <img src={src} alt={''} className={'h-10 w-10'} />
+          </div>
+          <dl className={'flex flex-auto flex-wrap gap-x-2'}>
+            <dt className={'sr-only'}>Name</dt>
+            <dd
+              className={
+                'w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100'
+              }
+            >
+              {personName}
+            </dd>
+            <dt className={'sr-only'}>Role</dt>
+            <dd className={'text-xs text-zinc-500 dark:text-zinc-400'}>
+              {role}
+            </dd>
+          </dl>
+        </li>
       ))}
-    </article>
-  </section>
+    </ol>
+  </div>
 );
 
 export default Team;

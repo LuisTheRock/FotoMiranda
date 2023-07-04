@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 
 import { CustomToaster } from '../../components/CustomToaster';
 import { Footer } from '../../components/Footer';
-import Navbar from '../../components/navbar/Navbar';
+import Header from '../../components/Header';
 import CarouselBackend from '../../components/ui/CarouselBackend';
 import { GetAlbumProfileInfo } from '../../data/hooks/useAlbumProfile';
 import { RootState } from '../../utils/store';
@@ -17,27 +17,21 @@ const Profile = () => {
   if (status === 'loading') return <h1>Loading...</h1>;
 
   return (
-    <>
-      <Navbar />
+    <section className={'md:px-24 md:py-10 px-5 py-10 flex flex-col gap-10'}>
+      <Header />
       {isAuth ? (
-        <>
-          <h1 className={'text-4xl font-Montserrat'}>
+        <main className={'flex flex-col gap-10'}>
+          <h1 className={'text-4xl font-Dosis font-light'}>
             {t('labelWelcome')}: {data.albumName}
           </h1>
           <section>
-            <div
-              className={'md:col-start-3 md:col-end-11 col-start-1 col-end-13'}
-            >
-              <CarouselBackend {...data} />
-            </div>
+            <CarouselBackend {...data} />
           </section>
-        </>
-      ) : (
-        <div>Error</div>
-      )}
+        </main>
+      ) : null}
       <Footer />
       <CustomToaster />
-    </>
+    </section>
   );
 };
 

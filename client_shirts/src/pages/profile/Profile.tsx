@@ -1,4 +1,4 @@
-import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
@@ -13,6 +13,7 @@ const Profile = () => {
   const { id } = useParams();
   const { isAuth } = useSelector((state: RootState) => state.auth);
   const { status, data } = GetAlbumProfileInfo(Number(id));
+  const { t } = useTranslation();
 
   if (status === 'loading') return <h1>Loading...</h1>;
 

@@ -1,4 +1,4 @@
-import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 const now = new Date().getFullYear();
@@ -20,48 +20,56 @@ const socialMedia = [
   },
 ];
 
-export const Footer = () => (
-  <footer className={'mt-32'}>
-    <div className={'sm:px-8'}>
-      <div className={'mx-auto max-w-7xl lg:px-8'}>
-        <div
-          className={
-            'border-t border-zinc-100 pb-16 pt-10 dark:border-zinc-700/40'
-          }
-        >
-          <div className={'mx-auto max-w-2xl lg:max-w-5xl'}>
-            <div className={'flex flex-col items-center justify-between gap-6'}>
-              <div className={'flex flex-wrap justify-center gap-x-6 gap-y-1'}>
-                {socialMedia.map(({ name, url, path }) => (
-                  <Link
-                    to={url}
-                    key={name}
-                    target={'_black'}
-                    rel={'noopener noreferrer'}
-                  >
-                    <svg
-                      viewBox={'0 0 50 50'}
-                      aria-hidden={true}
-                      className={
-                        'h-7 w-7 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300'
-                      }
-                    >
-                      {path}
-                    </svg>
-                  </Link>
-                ))}
-              </div>
-              <p
-                className={
-                  'text-sm text-zinc-400 dark:text-zinc-500 text-center'
-                }
+export const Footer = () => {
+  const { t } = useTranslation();
+
+  return (
+    <footer className={'mt-32'}>
+      <div className={'sm:px-8'}>
+        <div className={'mx-auto max-w-7xl lg:px-8'}>
+          <div
+            className={
+              'border-t border-zinc-100 pb-16 pt-10 dark:border-zinc-700/40'
+            }
+          >
+            <div className={'mx-auto max-w-2xl lg:max-w-5xl'}>
+              <div
+                className={'flex flex-col items-center justify-between gap-6'}
               >
-                © {now} FotoMiranda. {t('footerRights')}
-              </p>
+                <div
+                  className={'flex flex-wrap justify-center gap-x-6 gap-y-1'}
+                >
+                  {socialMedia.map(({ name, url, path }) => (
+                    <Link
+                      to={url}
+                      key={name}
+                      target={'_black'}
+                      rel={'noopener noreferrer'}
+                    >
+                      <svg
+                        viewBox={'0 0 50 50'}
+                        aria-hidden={true}
+                        className={
+                          'h-7 w-7 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300'
+                        }
+                      >
+                        {path}
+                      </svg>
+                    </Link>
+                  ))}
+                </div>
+                <p
+                  className={
+                    'text-sm text-zinc-400 dark:text-zinc-500 text-center'
+                  }
+                >
+                  © {now} FotoMiranda. {t('footerRights')}
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
-);
+    </footer>
+  );
+};

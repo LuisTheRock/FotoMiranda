@@ -1,4 +1,3 @@
-import { lazy, Suspense, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { CustomToaster } from '../../components/CustomToaster';

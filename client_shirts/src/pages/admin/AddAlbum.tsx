@@ -1,5 +1,5 @@
 import { FormikHelpers } from 'formik';
-import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 import { CustomToaster } from '../../components/CustomToaster';
 import CustomFormik from '../../components/forms/CustomFormik';
@@ -10,6 +10,7 @@ import { RegisterAlbum } from '../../data/hooks/useRegisterAlbum';
 const AddAlbum = () => {
   const { mutate } = RegisterAlbum();
   const { GetAddAlbumFields } = FormFieldsGenerator();
+  const { t } = useTranslation();
 
   const handleSubmit = (
     values: any,

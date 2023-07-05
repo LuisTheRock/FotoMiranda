@@ -36,7 +36,7 @@ const GoogleMaps = ({ lat, lng, zoom, classNameProps }: IGoogleMaps) => {
         });
       })
       .catch(() => {
-        console.warn('Google Maps API não está dispoível.');
+        console.warn('Google Maps API not available.');
       });
   }, [lat, lng, zoom]);
 

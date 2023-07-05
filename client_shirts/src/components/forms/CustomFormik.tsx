@@ -1,15 +1,16 @@
 import { Field as Field1, Form, Formik } from 'formik';
+import { useTranslation } from 'react-i18next';
 import * as Yup from 'yup';
 
+import { IFormFormik } from '../../interfaces/IFormik';
 import ButtonSubmit from '../ui/ButtonSubmit';
 import Field from './Field';
 import { FormFields } from './FormFieldsGenerator';
-import { IFormFormik } from '../../interfaces/IFormik';
-import { t } from 'i18next';
 
 const CustomFormik = ({ functionToUse, onSubmit }: IFormFormik) => {
   const formFields: FormFields = functionToUse();
   const validate = Yup.object(formFields.validations);
+  const { t } = useTranslation();
 
   return (
     <Formik

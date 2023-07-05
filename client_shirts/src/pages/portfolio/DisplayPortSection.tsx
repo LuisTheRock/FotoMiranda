@@ -1,7 +1,6 @@
-import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 import Carousel2 from '../../components/ui/Carousel2';
-import { layout } from '../../style';
 
 interface IShowPortfolio {
   bg_color: string;
@@ -10,12 +9,9 @@ interface IShowPortfolio {
   altName: string;
 }
 
-const DisplayPortSection = ({
-  title,
-  bg_color,
-  images,
-  altName,
-}: IShowPortfolio) => {
+const DisplayPortSection = ({ title, images, altName }: IShowPortfolio) => {
+  const { t } = useTranslation();
+
   return (
     <section
       className={`bg-[#fca311] dark:bg-zinc-900 flex h-screen md:sticky relative top-0 select-none`}

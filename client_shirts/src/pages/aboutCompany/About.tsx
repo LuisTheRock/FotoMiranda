@@ -1,6 +1,8 @@
-import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
+  const { t } = useTranslation();
+
   const paragraphs = [
     t('aboutCompany1p'),
     t('aboutCompany2p'),

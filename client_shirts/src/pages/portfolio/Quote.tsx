@@ -1,7 +1,7 @@
-import { index } from '../assets/home';
+import { index } from '../../assets/home';
 
 const Quote = () => (
-  <section className={'mt-16 sm:mt-20'}>
+  <section className={'my-16 sm:my-20'}>
     <div
       className={
         '-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8'
@@ -16,7 +16,7 @@ const Quote = () => (
         >
           <img
             src={img}
-            alt={''}
+            alt={'Image to capture user'}
             className={'absolute inset-0 h-full w-full object-cover'}
           />
         </div>

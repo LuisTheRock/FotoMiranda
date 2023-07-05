@@ -8,7 +8,7 @@ import Contacts from './pages/contacts/Contacts';
 import ReachUs from './pages/contacts/ReachUs';
 import Home from './pages/Home';
 import ImagesDisplay from './pages/portfolio/ImagesDisplay';
-import Quote from './pages/Quote';
+import Quote from './pages/portfolio/Quote';
 
 const App = () => (
   <div className={'flex h-full flex-col bg-zinc-50 dark:bg-black'}>

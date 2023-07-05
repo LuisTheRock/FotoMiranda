@@ -3,7 +3,7 @@ import Navbar from './navbar/Navbar';
 
 const Header = () => {
   return (
-    <header className={'sm:px-8 mb-24 md:mb-28 mt-5'}>
+    <header className={'sm:px-8 mt-5'}>
       <div className={'mx-auto max-w-7xl lg:px-8'}>
         <div className={'relative px-4 sm:px-8 lg:px-12'}>
           <div className={'mx-auto max-w-4xl lg:max-w-5xl'}>

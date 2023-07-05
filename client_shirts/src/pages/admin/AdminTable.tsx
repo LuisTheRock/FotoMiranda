@@ -16,15 +16,6 @@ const AdminTable = ({ onClickButton }: IAlbumTableProps) => {
   const { data, status } = GetAllAlbums();
   const { mutate } = DeleteAlbum();
   const { t } = useTranslation();
-  // const [formatDate, setFormatDate] = useState<(date: string) => string>(
-  //   () => () => ''
-  // );
-
-  // useEffect(() => {
-  //   import('../../utils/formatDate').then(({ FormatDate }) => {
-  //     setFormatDate(() => FormatDate);
-  //   });
-  // }, []);
 
   if (status === 'loading') {
     return <div>Loading...</div>;
@@ -35,18 +26,22 @@ const AdminTable = ({ onClickButton }: IAlbumTableProps) => {
   };
 
   return (
-    <section className={'flex flex-col gap-10'}>
-      <h1 className={'text-4xl text-center font-Dosis font-light'}>
+    <section className={'flex flex-col'}>
+      <h1
+        className={
+          'text-4xl text-center font-Dosis font-light text-zinc-800 dark:text-zinc-100'
+        }
+      >
         {t('labelAlbums')}
       </h1>
 
       <table
         className={
-          'table-auto w-full border-separate border-spacing-y-4 border-spacing-x-10 ring-1 ring-secondary text-secondary rounded-xl'
+          'table-auto mt-10 w-full border-separate border-spacing-y-4 border-spacing-x-10 ring-1 ring-secondary text-secondary rounded-xl'
         }
       >
         <thead>
-          <tr>
+          <tr className={'text-zinc-800 dark:text-zinc-100'}>
             <th className={'border-b-[3px] border-coral'}>
               {t('tableLabelName')}
             </th>
@@ -61,7 +56,9 @@ const AdminTable = ({ onClickButton }: IAlbumTableProps) => {
             </th>
           </tr>
         </thead>
-        <tbody className={'font-Montserrat text-sm'}>
+        <tbody
+          className={'font-Montserrat text-sm text-zinc-800 dark:text-zinc-100'}
+        >
           {data.map((album: IAllAlbums) => (
             <tr key={album.id} className={'text-center'}>
               <td className={'border-b-[1px] border-secondary'}>
@@ -76,7 +73,6 @@ const AdminTable = ({ onClickButton }: IAlbumTableProps) => {
                 }
               >
                 {FormatDate(album.createdAt)}
-                {/* {formatDate && formatDate(album.createdAt)} */}
               </td>
               {album.role !== EntityTypes.Admin && (
                 <td
@@ -87,7 +83,7 @@ const AdminTable = ({ onClickButton }: IAlbumTableProps) => {
                   <button
                     onClick={() => handleClick(album.id)}
                     className={
-                      'p-2 bg-green/60 ring-1 ring-slate-700 w-full rounded-lg'
+                      'p-2 bg-green/60 ring-1 ring-slate-700 dark:ring-zinc-100/40 w-full rounded-lg'
                     }
                   >
                     {t('labelSeeAlbum')}
@@ -95,7 +91,7 @@ const AdminTable = ({ onClickButton }: IAlbumTableProps) => {
                   <button
                     onClick={() => mutate(album.id)}
                     className={
-                      'p-2 bg-red-700/60 mb-1 ring-1 ring-slate-700 w-full rounded-lg'
+                      'p-2 bg-red-700/60 mb-1 ring-1 ring-slate-700 dark:ring-zinc-100/40 w-full rounded-lg'
                     }
                   >
                     {t('labelRemoveAlbum')}

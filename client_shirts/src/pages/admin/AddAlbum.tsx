@@ -31,11 +31,17 @@ const AddAlbum = () => {
   };
 
   return (
-    <div className={'md:w-min w-full flex flex-col gap-10'}>
-      <h1 className={`text-4xl text-center font-Dosis font-light`}>
+    <div className={'md:w-min w-full flex flex-col'}>
+      <h1
+        className={`text-4xl text-center font-Dosis font-light text-zinc-800 dark:text-zinc-100`}
+      >
         {t('registAlbum')}
       </h1>
-      <div className={'bg-blue-200 ring-1 ring-black p-2 rounded-xl'}>
+      <div
+        className={
+          'bg-zinc-300/40 mt-10 ring-1 ring-black p-4 rounded-xl dark:text-zinc-100 text-zinc-800'
+        }
+      >
         <CustomFormik
           onSubmit={handleSubmit}
           functionToUse={GetAddAlbumFields}

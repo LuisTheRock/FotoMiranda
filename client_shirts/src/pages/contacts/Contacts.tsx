@@ -8,7 +8,10 @@ import { Link } from 'react-router-dom';
  * Also have a form that the user can fullfil to enter in contact with the company.
  */
 const Contacts = () => (
-  <article className={'group relative flex flex-col items-start'}>
+  <article
+    className={'group relative flex flex-col items-start'}
+    id={'contactComp'}
+  >
     <h2
       className={
         'text-3xl mb-3 font-normal font-Dosis tracking-tight text-zinc-800 dark:text-zinc-100'

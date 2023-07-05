@@ -22,14 +22,21 @@ const CustomFormik = ({ functionToUse, onSubmit }: IFormFormik) => {
           <div key={item.name} className={'grid grid-rows-1'}>
             {item.type === 'file' ? (
               <>
-                <label htmlFor={item.name}>{item.label}</label>
+                <label
+                  className={
+                    'dark:text-zinc-100 text-zinc-800 font-Montserrat font-normal'
+                  }
+                  htmlFor={item.name}
+                >
+                  {item.label}
+                </label>
                 <Field1
                   label={item.label}
                   name={item.name}
                   type={item.type}
                   placeholder={item.placeholder}
                   component={item.component}
-                  className={'mb-3 font-Cormorant font-normal'}
+                  className={'mb-3 font-Cormorant text-base font-normal'}
                 />
               </>
             ) : (
@@ -44,7 +51,9 @@ const CustomFormik = ({ functionToUse, onSubmit }: IFormFormik) => {
           </div>
         ))}
         <p
-          className={'font-Montserrat font-normal text-white text-xs mb-5 mt-2'}
+          className={
+            'font-Montserrat font-normal text-zinc-800 dark:text-zinc-100 text-xs mb-5 mt-2'
+          }
         >
           {t('necessaryField')}
         </p>

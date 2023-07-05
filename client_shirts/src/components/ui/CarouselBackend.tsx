@@ -13,7 +13,7 @@ export interface IAlbumProfileInfo {
   interval?: number;
 }
 
-const CarouselBackend = ({ images, interval = 5000 }: IAlbumProfileInfo) => {
+const CarouselBackend = ({ images, interval = 9000 }: IAlbumProfileInfo) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrevClick = useCallback(() => {

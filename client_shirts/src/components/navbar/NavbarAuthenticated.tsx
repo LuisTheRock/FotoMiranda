@@ -1,5 +1,6 @@
 import ButtonLogOut from '../ui/ButtonLogOut';
 import LanguageSelector from './LanguageSelector';
+import ToggleDarkMode from './ToggleDarkMode';
 
 interface INavbarAuth {
   isToggle: boolean;
@@ -14,6 +15,7 @@ const NavbarAuthenticated = ({ isToggle, onAuthIconChange }: INavbarAuth) => {
         onAuthIconChange={onAuthIconChange}
       />
       <ButtonLogOut />
+      <ToggleDarkMode />
     </div>
   );
 };

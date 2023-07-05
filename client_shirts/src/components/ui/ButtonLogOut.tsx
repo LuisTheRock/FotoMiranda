@@ -20,7 +20,7 @@ const ButtonLogOut = () => {
   return (
     <div className={`${layout.buttonInOut}`}>
       <ArrowRightOnRectangleIcon
-        className={`w-5 h-5 cursor-pointer`}
+        className={`w-5 h-5 cursor-pointer stroke-zinc-800 dark:stroke-zinc-100`}
         onClick={handleLogout}
       >
         {t('labelExit')}

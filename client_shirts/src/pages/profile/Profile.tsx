@@ -17,11 +17,19 @@ const Profile = () => {
   if (status === 'loading') return <h1>Loading...</h1>;
 
   return (
-    <section className={'md:px-24 md:py-10 px-5 py-10 flex flex-col gap-10'}>
+    <section
+      className={
+        'md:px-24 md:py-10 px-5 py-10 flex flex-col gap-10 bg-zinc-100 dark:bg-zinc-800'
+      }
+    >
       <Header />
       {isAuth ? (
         <main className={'flex flex-col gap-10'}>
-          <h1 className={'text-4xl font-Dosis font-light'}>
+          <h1
+            className={
+              'text-4xl font-Dosis font-light text-zinc-900 dark:text-zinc-100'
+            }
+          >
             {t('labelWelcome')}: {data.albumName}
           </h1>
           <section>

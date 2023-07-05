@@ -24,9 +24,7 @@ const CustomFormik = ({ functionToUse, onSubmit }: IFormFormik) => {
             {item.type === 'file' ? (
               <>
                 <label
-                  className={
-                    'dark:text-zinc-100 text-zinc-800 font-Montserrat font-normal'
-                  }
+                  className={'text-zinc-100 font-Montserrat font-normal'}
                   htmlFor={item.name}
                 >
                   {item.label}
@@ -37,7 +35,9 @@ const CustomFormik = ({ functionToUse, onSubmit }: IFormFormik) => {
                   type={item.type}
                   placeholder={item.placeholder}
                   component={item.component}
-                  className={'mb-3 font-Cormorant text-base font-normal'}
+                  className={
+                    'mb-3 font-Cormorant text-zinc-100 text-base font-normal'
+                  }
                 />
               </>
             ) : (
@@ -53,7 +53,7 @@ const CustomFormik = ({ functionToUse, onSubmit }: IFormFormik) => {
         ))}
         <p
           className={
-            'font-Montserrat font-normal text-zinc-800 dark:text-zinc-100 text-xs mb-5 mt-2'
+            'font-Montserrat font-normal text-zinc-100 text-xs mb-5 mt-2'
           }
         >
           {t('necessaryField')}

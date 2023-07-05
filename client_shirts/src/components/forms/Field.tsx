@@ -10,12 +10,12 @@ const Field = ({ label, ...props }: any) => {
           'grid grid-rows-1 font-Montserrat font-normal row-span-full mb-3'
         }
       >
-        <label className={'dark:text-white text-zinc-800'} htmlFor={field.name}>
+        <label className={'text-white'} htmlFor={field.name}>
           {label}
         </label>
         {field.name === 'message' ? (
           <textarea
-            className={`rounded bg-inherit border-zinc-900 dark:border-white  border shadow-none p-1 ${
+            className={`rounded bg-inherit border-white border shadow-none p-1 ${
               meta.touched && meta.error && 'is-invalid'
             }`}
             {...field}
@@ -24,7 +24,7 @@ const Field = ({ label, ...props }: any) => {
           />
         ) : (
           <input
-            className={`bg-inherit rounded p-1 border-zinc-900 dark:border-white border focus-visible:bg-white shadow-none ${
+            className={`bg-inherit rounded p-1 border-white border focus-visible:bg-white shadow-none ${
               meta.touched && meta.error && 'is-invalid'
             }`}
             {...field}

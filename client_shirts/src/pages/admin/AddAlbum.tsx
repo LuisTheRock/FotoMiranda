@@ -40,7 +40,7 @@ const AddAlbum = () => {
       </h1>
       <div
         className={
-          'bg-zinc-300/40 mt-10 ring-1 ring-black p-4 rounded-xl dark:text-zinc-100 text-zinc-800'
+          'bg-zinc-800 mt-10 ring-1 ring-black p-4 rounded-xl dark:text-zinc-100 text-zinc-800'
         }
       >
         <CustomFormik

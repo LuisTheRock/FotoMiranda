@@ -34,7 +34,7 @@ const Carousel2 = ({ images, altName, interval = 5000 }: CarouselProps) => {
       <img
         src={currentImage}
         alt={altName}
-        className={`z-10 h-full w-full object-cover`}
+        className={`z-10 h-full w-full object-cover rounded-xl`}
       />
 
       <div

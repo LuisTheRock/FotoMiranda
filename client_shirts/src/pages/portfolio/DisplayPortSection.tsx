@@ -18,24 +18,18 @@ const DisplayPortSection = ({
 }: IShowPortfolio) => {
   return (
     <section
-      className={`${bg_color} flex min-h-screen justify-center items-center md:sticky relative top-0 select-none`}
+      className={`bg-[#fca311] dark:bg-zinc-900 flex h-screen md:sticky relative top-0 select-none`}
     >
-      <div
-        className={
-          'flex-col md:pb-5 pb-20 flex w-full items-center justify-center'
-        }
-      >
+      <div className={'flex flex-col max-w-full content-center justify-center'}>
         <h1
           className={
-            'flex-shrink-0 w-full h-auto whitespace-pre-wrap break-words max-w-full overflow-visible relative font-normal font-[Elsie] text-5xl tracking-normal leading-[1.2] text-center'
+            'relative font-light font-Dosis dark:text-zinc-100 text-5xl tracking-normal leading-[1.2] text-center'
           }
         >
           {t(title)}
         </h1>
-        <section className={'py-5'}>
-          <div className={`${layout.gridStartEnd} shadow-xl shadow-black`}>
-            <Carousel2 images={images} altName={altName} />
-          </div>
+        <section className={'mt-5'}>
+          <Carousel2 images={images} altName={altName} />
         </section>
       </div>
     </section>

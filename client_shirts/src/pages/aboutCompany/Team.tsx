@@ -1,4 +1,6 @@
-import ImageUncles from '../../assets/tios.jpg';
+import TioFace from '../../assets/tio_face.jpeg';
+import TiaFace from '../../assets/tia_face.jpeg';
+import RicardoFace from '../../assets/ricardo_face2.jpeg';
 import { useTranslation } from 'react-i18next';
 
 const Team = () => {
@@ -6,17 +8,17 @@ const Team = () => {
 
   const personsWork = [
     {
-      src: ImageUncles,
+      src: RicardoFace,
       personName: 'Ricardo Miranda',
       role: t('teamMemberLead'),
     },
     {
-      src: ImageUncles,
+      src: TiaFace,
       personName: 'Eulália Miranda',
       role: t('teamMemberLead'),
     },
     {
-      src: ImageUncles,
+      src: TioFace,
       personName: 'Joaquim Miranda',
       role: t('teamMemberVideo'),
     },
@@ -43,7 +45,11 @@ const Team = () => {
                 'relative mt-1 flex h-16 w-16 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0'
               }
             >
-              <img src={src} alt={''} className={'h-10 w-10'} />
+              <img
+                src={src}
+                alt={''}
+                className={'h-full w-full rounded-full'}
+              />
             </div>
             <dl className={'flex flex-auto flex-wrap gap-x-2'}>
               <dt className={'sr-only'}>Name</dt>

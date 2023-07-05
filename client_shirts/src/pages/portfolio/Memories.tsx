@@ -2,7 +2,7 @@ import { ArrowLeftIcon } from '@heroicons/react/24/outline';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
-import PhotoMemories from '../../assets/Bloglovin’.jfif';
+import PhotoMemories from '../../assets/Bloglovin’.jpg';
 import { Footer } from '../../components/Footer';
 import Header from '../../components/Header';
 import PortfolioCarousel from './PortfolioCarousel';

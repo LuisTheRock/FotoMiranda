@@ -1,4 +1,6 @@
+import { ChevronRightIcon } from '@heroicons/react/24/outline';
 import { t } from 'i18next';
+import { Link } from 'react-router-dom';
 
 /**
  *
@@ -17,14 +19,14 @@ const Contacts = () => (
           'absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl'
         }
       ></div>
-      <a href={'/contact'}>
+      <Link to={'/contact'}>
         <span
           className={
             'absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl'
           }
         ></span>
         <span className={'relative z-10'}>{t('reachUsTitle')}</span>
-      </a>
+      </Link>
     </h2>
 
     <p
@@ -41,19 +43,7 @@ const Contacts = () => (
       }
     >
       {t('contactUsLabel')}
-      <svg
-        viewBox={'0 0 16 16'}
-        fill={'none'}
-        aria-hidden={'true'}
-        className={'ml-1 h-4 w-4 stroke-current'}
-      >
-        <path
-          d={'M6.75 5.75 9.25 8l-2.5 2.25'}
-          stroke-width={'1.5'}
-          stroke-linecap={'round'}
-          stroke-linejoin={'round'}
-        ></path>
-      </svg>
+      <ChevronRightIcon className={'w-3 ml-1 stroke-2'} />
     </div>
   </article>
 );

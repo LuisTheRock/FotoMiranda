@@ -1,4 +1,5 @@
 import { t } from 'i18next';
+import { Link } from 'react-router-dom';
 
 const now = new Date().getFullYear();
 
@@ -24,54 +25,38 @@ const socialMedia = [
 ];
 
 export const Footer = () => (
-  <footer
-    className={
-      'box-border flex-shrink-0 w-full h-min flex flex-col justify-center items-center md:p-24 px-5 py-10 overflow-hidden relative content-center flex-nowrap gap-10'
-    }
-  >
-    <div
-      className={
-        'flex-shrink-0 w-full h-min flex flex-col justify-center items-center max-w-full overflow-visible relative p-0 content-center flex-nowrap gap-0'
-      }
-    >
-      <div
-        className={
-          'flex-shrink-0 w-min h-min flex flex-row justify-center items-center overflow-hidden relative p-0 content-center flex-nowrap gap-10'
-        }
-      >
-        {socialMedia.map(({ name, url, rel, target, path }) => (
-          <a key={name} href={url} target={target} rel={rel}>
-            <svg
-              viewBox={'0 0 50 50'}
-              xmlns={'http://www.w3.org/2000/svg'}
-              width={'30'}
-              height={'30'}
-              className={''}
-            >
-              {path}
-            </svg>
-          </a>
-        ))}
+  <footer className={'mt-32'}>
+    <div className={'sm:px-8'}>
+      <div className={'mx-auto max-w-7xl lg:px-8'}>
+        <div
+          className={
+            'border-t border-zinc-100 pb-16 pt-10 dark:border-zinc-700/40'
+          }
+        >
+          <div className={'mx-auto max-w-2xl lg:max-w-5xl'}>
+            <div className={'flex flex-col items-center justify-between gap-6'}>
+              <div className={'flex flex-wrap justify-center gap-x-6 gap-y-1'}>
+                {socialMedia.map(({ name, url, path, rel, target }) => (
+                  <Link to={url} key={name} target={target} rel={rel}>
+                    <svg
+                      viewBox={'0 0 50 50'}
+                      aria-hidden={true}
+                      className={
+                        'h-7 w-7 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300'
+                      }
+                    >
+                      {path}
+                    </svg>
+                  </Link>
+                ))}
+              </div>
+              <p className={'text-sm text-zinc-400 dark:text-zinc-500'}>
+                © {now} FotoMiranda. {t('footerRights')}
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <span
-        className={
-          'flex-shrink-0 w-full h-[30px] block overflow-hidden relative'
-        }
-      />
-      <p
-        className={
-          'flex-shrink-0 w-full h-auto whitespace-pre-wrap break-words overflow-hidden relative font-medium font-serif text-base leading-normal text-center'
-        }
-      >
-        © {now} FotoMiranda. {t('footerRights')}
-      </p>
-      <p
-        className={
-          'flex-shrink-0 w-full h-auto whitespace-pre-wrap break-words overflow-hidden relative opacity-50 font-medium font-serif text-base tracking-normal leading-normal text-center'
-        }
-      >
-        {t('footer1')}
-      </p>
     </div>
   </footer>
 );

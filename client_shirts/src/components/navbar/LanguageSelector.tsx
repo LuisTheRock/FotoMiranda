@@ -32,9 +32,12 @@ const LanguageSelector = ({
   };
 
   return (
-    <Popover className={'relative'}>
+    <Popover className={'relative mx-3'}>
       <Popover.Button className={`${layout.buttonInOut}`}>
-        <GlobeAltIcon className={'w-5 h-5'} onClick={handleChildToggle} />
+        <GlobeAltIcon
+          className={'w-5 h-5 stroke-zinc-800 dark:stroke-zinc-100'}
+          onClick={handleChildToggle}
+        />
       </Popover.Button>
       <Transition
         as={Fragment}

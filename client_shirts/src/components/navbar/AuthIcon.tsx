@@ -32,11 +32,11 @@ const AuthIcon = ({ isToggle, onAuthIconChange, currentColor }: IAuthIcon) => {
   };
 
   return (
-    <Popover className={'px-6 relative'}>
+    <Popover className={'mx-3 relative'}>
       <Popover.Button className={`${layout.buttonInOut}`}>
         <UserIcon
           onClick={handleChildToggle}
-          className={`stroke-${currentColor} w-5 h-5`}
+          className={`stroke-zinc-800 dark:stroke-zinc-100 w-5 h-5`}
         />
       </Popover.Button>
       <Transition

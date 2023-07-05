@@ -1,4 +1,6 @@
+import { ChevronRightIcon } from '@heroicons/react/24/outline';
 import { t } from 'i18next';
+import { Link } from 'react-router-dom';
 
 import PhotoDisplayed from '../../assets/Walpeper morrem.jpg';
 import { layout } from '../../style';
@@ -19,7 +21,7 @@ const ImagesDisplay = () => (
           >
             <img
               src={PhotoDisplayed}
-              alt={''}
+              alt={'Image to see the carousel'}
               className={'z-10 h-full w-full object-cover rounded-xl '}
             />
           </div>
@@ -38,9 +40,9 @@ const ImagesDisplay = () => (
             >
               {t('carouselSectionBody')}
             </p>
-            <a
+            <Link
+              to={'/memories'}
               className={`inline-flex w-min justify-center rounded-md py-3 px-4 outline-offset-2 active:transition-none bg-zinc-50 text-zinc-900 hover:bg-gold active:bg-gold active:text-zinc-900/50 dark:bg-zinc-500/50 dark:text-zinc-300 dark:hover:text-zinc-800 dark:active:text-zinc-50/70 ${layout.buttonInOut}`}
-              href={'/memories'}
             >
               <span
                 className={
@@ -48,21 +50,9 @@ const ImagesDisplay = () => (
                 }
               >
                 {t('carouselSectionButtonLabel')}
-                <svg
-                  viewBox={'0 0 16 16'}
-                  fill={'none'}
-                  aria-hidden={'true'}
-                  className={'ml-1 h-5 w-5 stroke-current'}
-                >
-                  <path
-                    d={'M6.75 5.75 9.25 8l-2.5 2.25'}
-                    stroke-width={'1.5'}
-                    stroke-linecap={'round'}
-                    stroke-linejoin={'round'}
-                  ></path>
-                </svg>
+                <ChevronRightIcon className={'w-3 ml-1'} />
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

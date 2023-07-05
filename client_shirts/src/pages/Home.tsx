@@ -8,7 +8,7 @@ const Home = () => (
           <div className={'mx-w-2xl flex flex-col items-center'}>
             <h1
               className={
-                'md:text-5xl text-4xl font-normal font-DancingScript tracking-normal text-zinc- dark:text-zinc-100 uppercase'
+                'md:text-5xl text-4xl font-normal font-DancingScript tracking-normal text-zinc-800 dark:text-zinc-100 uppercase'
               }
             >
               {t('principalHeader')}

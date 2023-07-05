@@ -1,8 +1,10 @@
-import { lazy, useState } from 'react';
+import { lazy, useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 
-import AuthIcon from './AuthIcon';
 import { useSelector } from '../../utils/store';
+import AuthIcon from './AuthIcon';
 import LanguageSelector from './LanguageSelector';
+import ToggleDarkMode from './ToggleDarkMode';
 
 interface MenuState {
   [key: string]: boolean;
@@ -12,12 +14,13 @@ const NavbarAuthenticated = lazy(() => import('./NavbarAuthenticated'));
 
 /**
  *
- * This component renders a navigation bar composed with a navigation menu and a language selector.
+ * This component renders a navigation bar composed with a auth menu and a language selector and dark mode switch.
  * The component is composing them together and adding some styling and functionality
  *
  */
 const Navbar = () => {
   const { isAuth } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
   const initialMenuStates: MenuState = {
     menu1: false,
     menu2: false,
@@ -53,6 +56,7 @@ const Navbar = () => {
             isToggle={menuStates['2']}
             onAuthIconChange={() => handleClick('2')}
           />
+          <ToggleDarkMode />
         </ul>
       )}
     </nav>

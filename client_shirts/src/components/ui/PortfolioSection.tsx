@@ -1,6 +1,4 @@
-import styles from '../../style';
 import Carousel from './Carousel';
-import TitleSection from './TitleSection';
 
 export interface IPortfolioSection {
   colStart: string;
@@ -18,13 +16,7 @@ const PortfolioSection = ({
   altName,
 }: IPortfolioSection) => (
   <div className={`${colStart} ${colEnd}`}>
-    <TitleSection
-      title={title}
-      titleHeight_Font={'text-2xl md:text-center text-left'}
-      paddingProps={'px-0'}
-      titleLayout={`${styles.colStart} ${styles.colEnd}`}
-      marginProps="mt-2"
-    />
+    <h1 className="text-2xl md:text-center text-left px-0 mt-2">{title}</h1>
     <Carousel images={images} altName={altName} />
   </div>
 );

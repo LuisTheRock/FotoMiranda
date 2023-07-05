@@ -11,12 +11,12 @@ import ImagesDisplay from './pages/portfolio/ImagesDisplay';
 import Quote from './pages/Quote';
 
 const App = () => (
-  <body className={'flex h-full flex-col bg-zinc-50 dark:bg-black'}>
+  <div className={'flex h-full flex-col bg-zinc-50 dark:bg-black'}>
     <div className={'fixed inset-0 flex justify-center sm:px-8'}>
       <div className={'flex w-full max-w-7xl lg:px-8'}>
         <div
           className={
-            'w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20'
+            'w-full ring-1 bg-white ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20'
           }
         />
       </div>
@@ -53,7 +53,7 @@ const App = () => (
       </main>
       <Footer />
     </div>
-  </body>
+  </div>
 );
 
 export default App;

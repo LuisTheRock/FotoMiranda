@@ -1,11 +1,12 @@
-import {Sequelize} from "sequelize";
+import { Sequelize } from 'sequelize';
 
 export const db = new Sequelize(
-    "photo_miranda_db",
-    "root",
-    "#DingDong!2001!##",
-    {
-        host: "localhost",
-        dialect: "mysql"
-    }
-)
+  'photo_miranda_db',
+  'root',
+  '#MangaS123##!',
+  //   '#DingDong!2001!##',
+  {
+    host: 'localhost',
+    dialect: 'mysql',
+  }
+);

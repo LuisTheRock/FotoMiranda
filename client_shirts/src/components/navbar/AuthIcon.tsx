@@ -7,6 +7,7 @@ import FormFieldsGenerator from '../forms/FormFieldsGenerator';
 import Album from '../../data/Album';
 import { Login } from '../../data/hooks/useLogin';
 import { layout } from '../../style';
+import { CustomToaster } from '../CustomToaster';
 
 interface IAuthIcon {
   isToggle: boolean;
@@ -63,6 +64,7 @@ const AuthIcon = ({ isToggle, onAuthIconChange, currentColor }: IAuthIcon) => {
           </div>
         </Popover.Panel>
       </Transition>
+      <CustomToaster />
     </Popover>
   );
 };

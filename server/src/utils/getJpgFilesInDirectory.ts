@@ -4,7 +4,7 @@ import path from 'path';
 import IImage from '../interfaces/IImage';
 
 function getImagesFromFolderDirectory(folderName: string): Promise<IImage[]> {
-  const imagesDirectory = `src/albums/${folderName}`;
+  const imagesDirectory = `src/assets/albums/${folderName}`;
 
   return new Promise((resolve, reject) => {
     fs.readdir(imagesDirectory, (err, files) => {

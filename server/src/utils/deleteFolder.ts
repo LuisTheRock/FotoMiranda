@@ -2,7 +2,7 @@ import fs from "fs";
 
 export function deleteFolder(folderName: string) {
 
-    const path = `src/albums/${folderName}`
+    const path = `src/assets/albums/${folderName}`
 
     if (fs.existsSync(path)) {
         fs.readdirSync(path).forEach((file) => {

@@ -1,12 +1,14 @@
+import dotenv from 'dotenv';
 import { Sequelize } from 'sequelize';
+
+dotenv.config();
 
 export const db = new Sequelize(
   'photo_miranda_db',
-  'root',
-  '#MangaS123##!',
-  //   '#DingDong!2001!##',
+  process.env.DB_USER!,
+  process.env.DB_PASS,
   {
-    host: 'localhost',
+    host: process.env.HOST,
     dialect: 'mysql',
   }
 );

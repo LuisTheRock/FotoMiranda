@@ -9,8 +9,6 @@ import { createAlbumFolder } from '../utils/createAlbumFolder';
 import { deleteFolder } from '../utils/deleteFolder';
 import getImagesFromFolderDirectory from '../utils/getJpgFilesInDirectory';
 
-function isValid() {}
-
 export class AlbumService {
   async getAlbumProfile(id: number): Promise<IAlbumProfile> {
     const album = await Album.findByPk(id);

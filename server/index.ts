@@ -5,7 +5,7 @@ import dotenv from 'dotenv';
 import express, { Express } from 'express';
 import multer from 'multer';
 
-import { db } from './dataBase';
+import { db } from './src/data/dataBase';
 import { AlbumController } from './src/controllers/AlbumController';
 import { EmailController } from './src/controllers/EmailController';
 import { AlbumService } from './src/services/AlbumService';
@@ -15,7 +15,7 @@ const app: Express = express();
 const upload = multer();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({ origin: process.env.REMOTE_SERVER_API }));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());

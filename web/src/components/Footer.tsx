@@ -29,7 +29,7 @@ export const Footer = () => {
         <div className={'mx-auto max-w-7xl lg:px-8'}>
           <div
             className={
-              'border-t border-zinc-100 pb-16 pt-10 dark:border-zinc-700/40'
+              'border-t border-zinc-300 pb-16 pt-10 dark:border-zinc-700/40'
             }
           >
             <div className={'mx-auto max-w-2xl lg:max-w-5xl'}>

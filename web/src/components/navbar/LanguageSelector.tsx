@@ -6,39 +6,23 @@ import { languagesOption } from '../../data/Constants';
 import i18n from '../../i18n';
 import { layout } from '../../style';
 
-interface ILanguageSelector {
-  isToggle: boolean;
-  onAuthIconChange: (authIconState: boolean) => void;
-  currentColor?: string;
-}
-
 /**
  ** This component is responsible for selecting the language that the user pretend to use on the website
  ** It´s primary responsibility is to render a language selector dropdown
  */
-const LanguageSelector = ({
-  isToggle,
-  onAuthIconChange,
-  currentColor,
-}: ILanguageSelector) => {
+const LanguageSelector = () => {
   const handleLanguageChange = (language: string) => {
     i18n.changeLanguage(language);
-    onAuthIconChange(false);
-  };
-
-  const handleChildToggle = () => {
-    const newChildState = !isToggle;
-    onAuthIconChange(newChildState);
   };
 
   return (
     <Popover className={'relative mx-3'}>
       <Popover.Button className={`${layout.buttonInOut}`}>
         <GlobeAltIcon
-          className={'w-5 h-5 stroke-zinc-800 dark:stroke-zinc-100'}
-          onClick={handleChildToggle}
+          className={'h-6 dark:stroke-1 stroke-zinc-800 dark:stroke-zinc-100'}
         />
       </Popover.Button>
+
       <Transition
         as={Fragment}
         enter={'transition ease-out duration-200'}

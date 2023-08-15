@@ -1,6 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
+interface Actions {
+  isAuth: boolean;
+  darkMode: boolean;
+}
+
+const initialState: Actions = {
   isAuth: false,
   darkMode: false,
 };
@@ -14,7 +19,7 @@ export const authActions = createSlice({
     },
     setDarkMode: (state, action) => {
       state.darkMode = action.payload;
-    }
+    },
   },
 });
 

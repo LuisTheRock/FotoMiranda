@@ -1,5 +1,7 @@
 import { useTranslation } from 'react-i18next';
 
+import ParagraphList from '../../components/ParagraphList';
+
 const About = () => {
   const { t } = useTranslation();
 
@@ -11,31 +13,37 @@ const About = () => {
   ];
 
   return (
-    <article className={'group relative flex flex-col items-start'}>
-      <h2
-        className={
-          'text-3xl mb-3 font-normal font-Dosis tracking-tight text-zinc-800 dark:text-zinc-100'
-        }
-      >
-        <span className={'relative z-10'}>{t('aboutUsTitle')}</span>
-        <div
-          className={
-            'absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl'
-          }
-        />
-      </h2>
-
-      {paragraphs.map((paragraph, index) => (
-        <p
-          className={
-            'mt-3 relative z-10 font-Montserrat font-light text-sm text-zinc-600 dark:text-zinc-400'
-          }
-          key={index}
-        >
-          {paragraph}
-        </p>
-      ))}
-    </article>
+    <section className={'sm:px-8 mt-24 md:mt-28 '}>
+      <div className={'mx-auto max-w-7xl lg:px-8'}>
+        <div className={'relative px-4 sm:px-8 lg:px-12 '}>
+          <div className={'mx-auto max-w-2xl lg:max-w-5xl'}>
+            <div
+              className={
+                'w-full bg-lightGray dark:bg-lightGray/10 shadow-xl shadow-black/70 dark:shadow-black py-16 rounded-2xl px-8'
+              }
+            >
+              <article className={'group relative w-full flex-col'}>
+                <h2
+                  className={
+                    'text-3xl mb-4 font-normal font-Cormorant tracking-tight text-zinc-700 dark:text-zinc-100'
+                  }
+                >
+                  {t('aboutUsTitle')}
+                </h2>
+                <div className={'flex flex-col md:flex-row md:gap-x-10'}>
+                  <div className={'w-full md:w-1/2'}>
+                    <ParagraphList paragraphs={paragraphs.slice(0, 2)} />
+                  </div>
+                  <div className={'w-full md:w-1/2'}>
+                    <ParagraphList paragraphs={paragraphs.slice(2)} />
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

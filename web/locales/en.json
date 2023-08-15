@@ -19,7 +19,7 @@
   "labelSend": "Send",
   "labelExit": "Exit",
 
-  "aboutUsTitle": "About Us",
+  "aboutUsTitle": "Well, hello there",
   "aboutCompany1p": "Allow your story to be told with simplicity and emotion, resulting in transparent and unforgettable images.",
   "aboutCompany2p": "Foto Miranda wants to participate in your wedding and eternalize the romanticism in the air. Synonymous with quality and perfection, the company does its best to make your celebration memorable.",
   "aboutCompany3p": "However, we photograph and film your wedding with advanced techniques and state-of-the-art equipment.",
@@ -42,61 +42,25 @@
   "portfolioSection3": "Birth",
   "portfolioSection4": "Wedding",
 
+  "testimonyTitle": "Kind Words",
+  "testimonyBody": "\"If there are suppliers that we would hire again, Foto Miranda is without a doubt one of them! Always super friendly, kind and professional! Super recommend!!\"",
+
   "formContactUsTitle": "Reach Out to us!",
   "formContactUsSubtitle": "Ready to start a conversation? Fill out the form below with your contact information and message. We can’t wait to hear what you have to say!",
 
-
-
-
-
-
-  "contactUsTitle": "Contact",
-  "contactUsSubtitle": "Located in Vila Nova de Gaia in the district of Porto and with easy access from the highway, here is our information.",
-
-  "contactUsFormDescription": "If you wish to contact us, please fill out the form below with your information and the request",
-  "address": "Address",
-  "cellphone": "Cellphone",
-
-  "footer1": " \"A fotografia é a poesia dos olhos, traduzida na essência das emoções.\" - Michelle Ramos",
-  "footer2": "Allow your story to be told in a truthful way.",
+  "emailSubject": "Contact to additional information",
 
   "formContactName*": "Name*",
   "formContactName": "Name",
-  "formContactCellphone*": "Cellphone",
-  "formContactCellphone": "Cellphone",
+  "formContactCellphone*": "Contact",
+  "formContactCellphone": "Contact",
   "formContactMessage*": "Message*",
   "formContactMessage": "Message",
   "formImagesLabel": "Images:",
   "necessaryField": "*Necessary camp",
 
-  "loginUser*": "User*",
-  "loginUser": "User",
-  "loginPassword*": "Password*",
-  "loginPassword": "Password",
-  "loginButtonLabel": "Sign In",
-  "labelLogOut": "Session ended successfully",
-
   "demandCamp": "Required field",
   "max50Characters": "Maximum 50 characters",
-  "invalidEmail": "Invalid email",
   "invalidCellphone": "Invalid number",
-  "max1000Characters": "Maximum 1000 characters",
-  "min6Characters": "Minimum of 6 characters",
-  "passwordNecessary": "Password required",
-  "authNecessary": "You have exited the page and lost access\nPlease authenticate again",
-
-  "registAlbum": "Register Album",
-  "labelAlbums": "Albums",
-  "labelSeeAlbum": "See Album",
-  "labelRemoveAlbum": "Remove",
-  "tableLabelName": "Name",
-  "tableLabelFunction": "Role",
-  "tableLabelCreatedAt": "Created at",
-  "tableLabelActions": "Actions",
-
-  "labelWelcome": "Welcome",
-  "labelErrorConnectionServer": "Server connection error",
-
-  "videosStage": "News coming soon",
-  "videosStage1": "But we don't stop here, let's continue the experience"
+  "max1000Characters": "Maximum 1000 characters"
 }

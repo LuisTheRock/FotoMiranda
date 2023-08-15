@@ -1,7 +1,8 @@
-import TioFace from '../../assets/tio_face.jpeg';
-import TiaFace from '../../assets/tia_face.jpeg';
-import RicardoFace from '../../assets/ricardo_face2.jpeg';
 import { useTranslation } from 'react-i18next';
+
+import RicardoFace from '../../assets/ricardo_face2.jpeg';
+import TiaFace from '../../assets/tia_face.jpeg';
+import TioFace from '../../assets/tio_face.jpeg';
 
 const Team = () => {
   const { t } = useTranslation();
@@ -27,7 +28,7 @@ const Team = () => {
   return (
     <div
       className={
-        'rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40'
+        'rounded-2xl border border-zinc-400/75 p-6 dark:border-zinc-700/40'
       }
     >
       <h2
@@ -39,16 +40,16 @@ const Team = () => {
       </h2>
       <ol className={'mt-6 space-y-4'}>
         {personsWork.map(({ src, personName, role }, index) => (
-          <li className={'flex gap-4'} key={index}>
+          <li className={'flex flex-row gap-4'} key={index}>
             <div
               className={
-                'relative mt-1 flex h-16 w-16 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0'
+                'relative flex h-16 w-16 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0'
               }
             >
               <img
                 src={src}
-                alt={''}
-                className={'h-full w-full rounded-full'}
+                alt={'FotoMiranda'}
+                className={'h-full w-full rounded-full pointer-events-none'}
               />
             </div>
             <dl className={'flex flex-auto flex-wrap gap-x-2'}>

@@ -14,19 +14,19 @@ const DisplayPortSection = ({ title, images, altName }: IShowPortfolio) => {
 
   return (
     <section
-      className={`bg-[#fca311] dark:bg-zinc-900 flex h-screen md:sticky relative top-0 select-none`}
+      className={
+        'md:h-screen h-full p-1 mt-10 md:p-0 top-0 rounded-xl md:flex justify-center md:sticky relative bg-zinc-50 dark:bg-zinc-800 select-none'
+      }
     >
       <div className={'flex flex-col max-w-full content-center justify-center'}>
         <h1
           className={
-            'relative font-light font-Dosis dark:text-zinc-100 text-5xl tracking-normal leading-[1.2] text-center'
+            'relative mb-10 font-light font-Dosis dark:text-zinc-100 text-5xl tracking-normal leading-[1.2] text-center'
           }
         >
           {t(title)}
         </h1>
-        <section className={'mt-5'}>
-          <Carousel2 images={images} altName={altName} />
-        </section>
+        <Carousel2 images={images} altName={altName} />
       </div>
     </section>
   );

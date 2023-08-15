@@ -1,10 +1,10 @@
 import { index } from '../../assets/home';
 
 const Quote = () => (
-  <section className={'my-16 sm:my-20'}>
+  <section className={'my-10 sm:my-20'}>
     <div
       className={
-        '-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8'
+        'my-20 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8'
       }
     >
       {index.map((img, index) => (

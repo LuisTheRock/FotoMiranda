@@ -215,7 +215,7 @@ const FormFieldsGenerator = () => {
     rawFields.push(
       getName(t('formContactName*')!, 'name', t('formContactName')!)
     );
-    rawFields.push(getEmail('E-mail*', 'E-mail'));
+    // rawFields.push(getEmail('E-mail*', 'E-mail'));
     rawFields.push(
       getCellPhone(
         t('formContactCellphone*')!,

@@ -1,62 +1,41 @@
-import { ChevronRightIcon } from '@heroicons/react/24/outline';
-import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
-
-import PhotoDisplayed from '../../assets/Walpeper morrem.jpg';
-import { layout } from '../../style';
+import { indexFriends } from '../../assets/portfolio/friends/indexFriends';
+import { indexLove } from '../../assets/portfolio/love/indexLove';
+import { indexNascimento } from '../../assets/portfolio/nascimento/indexNascimento';
+import { indexWedding } from '../../assets/portfolio/wedding/IndexWedding';
+import DisplayPortSection from './DisplayPortSection';
 
 const ImagesDisplay = () => {
-  const { t } = useTranslation();
-
   return (
-    <section className={'sm:px-8 mt-24 md:mt-36'}>
+    <section className={'sm:px-8 p-0'}>
       <div className={'mx-auto max-w-7xl lg:px-8'}>
         <div className={'relative px-4 sm:px-8 lg:px-12'}>
           <div className={'mx-auto max-w-2xl lg:max-w-5xl'}>
-            <div
-              className={
-                'mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2'
-              }
-            >
-              <div
-                className={
-                  'relative aspect-auto w-full flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl'
-                }
-              >
-                <img
-                  src={PhotoDisplayed}
-                  alt={'Image to see the carousel'}
-                  className={'z-10 h-full w-full object-cover rounded-xl '}
+            <div className={'mx-auto w-full'}>
+              <div id={'carousels'} className={'w-full h-full'}>
+                <DisplayPortSection
+                  bg_color={'bg-gray-400'}
+                  title={'portfolioSection4'}
+                  images={indexWedding}
+                  altName={'fotoMiranda weeding'}
                 />
-              </div>
-              <div className={'flex flex-col gap-5 justify-center'}>
-                <h3
-                  className={
-                    'text-3xl font-light font-Dosis tracking-tight text-zinc-800 dark:text-zinc-100'
-                  }
-                >
-                  {t('carouselSectionTitle')}
-                </h3>
-                <p
-                  className={
-                    'relative font-Montserrat font-light text-base text-zinc-600 dark:text-zinc-400'
-                  }
-                >
-                  {t('carouselSectionBody')}
-                </p>
-                <Link
-                  to={'/memories'}
-                  className={`inline-flex w-fit justify-center rounded-md py-3 px-4 outline-offset-2 active:transition-none bg-zinc-50 text-zinc-900 hover:bg-gold active:bg-gold active:text-zinc-900/50 dark:bg-zinc-500/50 dark:text-zinc-300 dark:hover:text-zinc-800 dark:active:text-zinc-50/70 ${layout.buttonInOut}`}
-                >
-                  <span
-                    className={
-                      'text-sm inline-flex items-center font-medium font-Montserrat'
-                    }
-                  >
-                    {t('carouselSectionButtonLabel')}
-                    <ChevronRightIcon className={'w-3 ml-1'} />
-                  </span>
-                </Link>
+                <DisplayPortSection
+                  bg_color={'bg-white'}
+                  title={'portfolioSection1'}
+                  images={indexFriends}
+                  altName={'fotoMiranda friends'}
+                />
+                <DisplayPortSection
+                  bg_color={'bg-white'}
+                  title={'portfolioSection2'}
+                  images={indexLove}
+                  altName={'fotoMiranda love'}
+                />
+                <DisplayPortSection
+                  bg_color={'bg-white'}
+                  title={'portfolioSection3'}
+                  images={indexNascimento}
+                  altName={'fotoMiranda birth'}
+                />
               </div>
             </div>
           </div>

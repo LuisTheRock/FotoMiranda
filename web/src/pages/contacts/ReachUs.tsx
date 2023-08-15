@@ -15,7 +15,7 @@ const ReachUs = () => {
   return (
     <section
       className={
-        'rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40'
+        'rounded-2xl p-6 border border-zinc-400/75 dark:border-zinc-700/60'
       }
     >
       <h2
@@ -38,7 +38,7 @@ const ReachUs = () => {
           key={index}
           href={`tel:${number.replace(/ /g, '')}`}
           className={
-            'inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none bg-zinc-50 font-medium text-zinc-900 hover:bg-zinc-100 active:bg-zinc-100 active:text-zinc-900/60 dark:bg-zinc-800/50 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 dark:active:bg-zinc-800/50 dark:active:text-zinc-50/70 group mt-3 w-full'
+            'inline-flex items-center gap-2 justify-center border dark:border-zinc-700 rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none bg-zinc-50 font-medium text-zinc-900 hover:bg-zinc-100 active:bg-zinc-100 active:text-zinc-900/60 dark:bg-zinc-800/50 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 dark:active:bg-zinc-800/50 dark:active:text-zinc-50/70 group mt-3 w-full'
           }
         >
           {number}
@@ -49,7 +49,7 @@ const ReachUs = () => {
         lat={GOOGLE_MAPS_LATITUDE}
         lng={GOOGLE_MAPS_LONGITUDE}
         zoom={GOOGLE_MAPS_ZOOM}
-        classNameProps={'w-full h-52 rounded-lg mt-5'}
+        classNameProps={'w-full h-56 rounded-lg mt-5'}
       />
     </section>
   );
